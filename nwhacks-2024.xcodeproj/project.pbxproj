@@ -17,6 +17,8 @@
 		1737560E2B5C5F42001EDD18 /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 1737560D2B5C5F42001EDD18 /* cat.png */; };
 		173756102B5C6098001EDD18 /* TaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1737560F2B5C6098001EDD18 /* TaskButton.swift */; };
 		173756122B5C68EE001EDD18 /* MainsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173756112B5C68EE001EDD18 /* MainsView.swift */; };
+		173756142B5C84E9001EDD18 /* FeedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173756132B5C84E9001EDD18 /* FeedButton.swift */; };
+		173756162B5C8D56001EDD18 /* FeedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173756152B5C8D56001EDD18 /* FeedButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		1737560D2B5C5F42001EDD18 /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cat.png; path = ../../cat.png; sourceTree = "<group>"; };
 		1737560F2B5C6098001EDD18 /* TaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskButton.swift; sourceTree = "<group>"; };
 		173756112B5C68EE001EDD18 /* MainsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainsView.swift; sourceTree = "<group>"; };
+		173756132B5C84E9001EDD18 /* FeedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedButton.swift; sourceTree = "<group>"; };
+		173756152B5C8D56001EDD18 /* FeedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 		173755F62B5C4FEE001EDD18 /* nwhacks-2024 */ = {
 			isa = PBXGroup;
 			children = (
+				173756152B5C8D56001EDD18 /* FeedButtonStyle.swift */,
 				1737560F2B5C6098001EDD18 /* TaskButton.swift */,
 				173755F72B5C4FEE001EDD18 /* nwhacks_2024App.swift */,
 				173755F92B5C4FEE001EDD18 /* ContentView.swift */,
@@ -73,6 +78,7 @@
 				173756072B5C5DF6001EDD18 /* PetView.swift */,
 				173756092B5C5E19001EDD18 /* TaskView.swift */,
 				173756112B5C68EE001EDD18 /* MainsView.swift */,
+				173756132B5C84E9001EDD18 /* FeedButton.swift */,
 			);
 			path = "nwhacks-2024";
 			sourceTree = "<group>";
@@ -157,8 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				173756102B5C6098001EDD18 /* TaskButton.swift in Sources */,
+				173756162B5C8D56001EDD18 /* FeedButtonStyle.swift in Sources */,
 				173756122B5C68EE001EDD18 /* MainsView.swift in Sources */,
 				173756082B5C5DF6001EDD18 /* PetView.swift in Sources */,
+				173756142B5C84E9001EDD18 /* FeedButton.swift in Sources */,
 				173755FA2B5C4FEE001EDD18 /* ContentView.swift in Sources */,
 				173755FC2B5C4FEE001EDD18 /* TaskItem.swift in Sources */,
 				1737560A2B5C5E19001EDD18 /* TaskView.swift in Sources */,

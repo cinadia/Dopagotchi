@@ -21,7 +21,14 @@ struct MainsView: View {
             VStack {
                 List {
                     ForEach(items) { item in
-                        Text(item.desc)
+                        Grid {
+                            GridRow {
+                                FeedButton()
+                                    .frame(maxHeight: 20)
+                                    .buttonStyle(FeedButtonStyle())
+                                Text(item.desc)
+                            }
+                        }
                     }
                     .onDelete(perform: deleteItems)
                 }
@@ -88,6 +95,7 @@ extension MainsView {
                 Button(action: {
                     isAddingItem.toggle()
                     isAddItemFocused.toggle()
+                    itemToAdd = ""
                 }) {
                     Label("Add Item", systemImage: "plus")
                 }

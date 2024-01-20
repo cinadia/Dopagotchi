@@ -16,7 +16,3 @@ struct FeedButtonStyle: ButtonStyle {
             .clipShape(Capsule())
     }
 }
-
-//#Preview {
-//    Feed()
-//}

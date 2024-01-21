@@ -11,7 +11,7 @@ import SwiftData
 struct SpecialsView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
-    @Query private var items: [TaskItem]
+    @Query private var items: [SpecialItem]
     @State private var isAddingItem = false
     @State private var itemToAdd = ""
     @FocusState private var isAddItemFocused: Bool
@@ -72,7 +72,7 @@ struct SpecialsView: View {
     private func addItem() {
         withAnimation {
             if (itemToAdd != "") {
-                let newItem = TaskItem(description: itemToAdd)
+                let newItem = SpecialItem(description: itemToAdd)
                 modelContext.insert(newItem)
             }
         }
@@ -112,5 +112,5 @@ extension SpecialsView {
 
 #Preview {
     SpecialsView()
-        .modelContainer(for: TaskItem.self, inMemory: true)
+        .modelContainer(for: SpecialItem.self, inMemory: true)
 }

@@ -11,7 +11,7 @@ import SwiftData
 struct AppsView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
-    @Query private var items: [TaskItem]
+    @Query private var items: [AppItem]
     @State private var isAddingItem = false
     @State private var itemToAdd = ""
     @FocusState private var isAddItemFocused: Bool
@@ -72,7 +72,7 @@ struct AppsView: View {
     private func addItem() {
         withAnimation {
             if (itemToAdd != "") {
-                let newItem = TaskItem(description: itemToAdd)
+                let newItem = AppItem(description: itemToAdd)
                 modelContext.insert(newItem)
             }
         }
@@ -112,5 +112,5 @@ extension AppsView {
 
 #Preview {
     AppsView()
-        .modelContainer(for: TaskItem.self, inMemory: true)
+        .modelContainer(for: AppItem.self, inMemory: true)
 }

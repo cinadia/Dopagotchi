@@ -11,7 +11,7 @@ import SwiftData
 struct SidesView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
-    @Query private var items: [TaskItem]
+    @Query private var items: [SideItem]
     @State private var isAddingItem = false
     @State private var itemToAdd = ""
     @FocusState private var isAddItemFocused: Bool
@@ -72,7 +72,7 @@ struct SidesView: View {
     private func addItem() {
         withAnimation {
             if (itemToAdd != "") {
-                let newItem = TaskItem(description: itemToAdd)
+                let newItem = SideItem(description: itemToAdd)
                 modelContext.insert(newItem)
             }
         }
@@ -112,5 +112,5 @@ extension SidesView {
 
 #Preview {
     SidesView()
-        .modelContainer(for: TaskItem.self, inMemory: true)
+        .modelContainer(for: SideItem.self, inMemory: true)
 }

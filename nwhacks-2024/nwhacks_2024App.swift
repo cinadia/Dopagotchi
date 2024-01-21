@@ -13,6 +13,11 @@ struct nwhacks_2024App: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             TaskItem.self,
+            MainItem.self,
+            AppItem.self,
+            SideItem.self,
+            DessertItem.self,
+            SpecialItem.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 

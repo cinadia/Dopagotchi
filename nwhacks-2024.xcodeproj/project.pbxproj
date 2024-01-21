@@ -28,6 +28,11 @@
 		173756292B5C96D7001EDD18 /* SpecialsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173756282B5C96D7001EDD18 /* SpecialsButton.swift */; };
 		1737562B2B5C96FE001EDD18 /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1737562A2B5C96FE001EDD18 /* SettingsButton.swift */; };
 		1737562D2B5C9722001EDD18 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1737562C2B5C9722001EDD18 /* SettingsView.swift */; };
+		173756302B5CB37C001EDD18 /* MainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1737562F2B5CB37C001EDD18 /* MainItem.swift */; };
+		173756322B5CB53A001EDD18 /* AppItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173756312B5CB53A001EDD18 /* AppItem.swift */; };
+		173756342B5CB5C9001EDD18 /* SideItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173756332B5CB5C9001EDD18 /* SideItem.swift */; };
+		173756362B5CB604001EDD18 /* DessertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173756352B5CB604001EDD18 /* DessertItem.swift */; };
+		173756382B5CB638001EDD18 /* SpecialItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173756372B5CB638001EDD18 /* SpecialItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +58,11 @@
 		173756282B5C96D7001EDD18 /* SpecialsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialsButton.swift; sourceTree = "<group>"; };
 		1737562A2B5C96FE001EDD18 /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
 		1737562C2B5C9722001EDD18 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1737562F2B5CB37C001EDD18 /* MainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItem.swift; sourceTree = "<group>"; };
+		173756312B5CB53A001EDD18 /* AppItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppItem.swift; sourceTree = "<group>"; };
+		173756332B5CB5C9001EDD18 /* SideItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideItem.swift; sourceTree = "<group>"; };
+		173756352B5CB604001EDD18 /* DessertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertItem.swift; sourceTree = "<group>"; };
+		173756372B5CB638001EDD18 /* SpecialItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,11 +95,11 @@
 		173755F62B5C4FEE001EDD18 /* nwhacks-2024 */ = {
 			isa = PBXGroup;
 			children = (
+				1737562E2B5CB36C001EDD18 /* Models */,
 				173756182B5C94D8001EDD18 /* Views */,
 				173756172B5C94BC001EDD18 /* Buttons */,
 				173755F72B5C4FEE001EDD18 /* nwhacks_2024App.swift */,
 				173755F92B5C4FEE001EDD18 /* ContentView.swift */,
-				173755FB2B5C4FEE001EDD18 /* TaskItem.swift */,
 				173755FD2B5C4FF0001EDD18 /* Assets.xcassets */,
 				173755FF2B5C4FF0001EDD18 /* Preview Content */,
 			);
@@ -132,6 +142,19 @@
 				1737562C2B5C9722001EDD18 /* SettingsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1737562E2B5CB36C001EDD18 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				173755FB2B5C4FEE001EDD18 /* TaskItem.swift */,
+				1737562F2B5CB37C001EDD18 /* MainItem.swift */,
+				173756312B5CB53A001EDD18 /* AppItem.swift */,
+				173756332B5CB5C9001EDD18 /* SideItem.swift */,
+				173756352B5CB604001EDD18 /* DessertItem.swift */,
+				173756372B5CB638001EDD18 /* SpecialItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,11 +230,16 @@
 				173756102B5C6098001EDD18 /* MainsButton.swift in Sources */,
 				1737561A2B5C94F7001EDD18 /* AppsButton.swift in Sources */,
 				173756162B5C8D56001EDD18 /* FeedButtonStyle.swift in Sources */,
+				173756342B5CB5C9001EDD18 /* SideItem.swift in Sources */,
 				173756122B5C68EE001EDD18 /* MainsView.swift in Sources */,
+				173756302B5CB37C001EDD18 /* MainItem.swift in Sources */,
+				173756362B5CB604001EDD18 /* DessertItem.swift in Sources */,
 				1737561C2B5C9518001EDD18 /* AppsView.swift in Sources */,
 				173756082B5C5DF6001EDD18 /* PetView.swift in Sources */,
 				173756252B5C968E001EDD18 /* SidesButton.swift in Sources */,
+				173756322B5CB53A001EDD18 /* AppItem.swift in Sources */,
 				173756142B5C84E9001EDD18 /* FeedButton.swift in Sources */,
+				173756382B5CB638001EDD18 /* SpecialItem.swift in Sources */,
 				173756272B5C96B5001EDD18 /* DessertsButton.swift in Sources */,
 				173755FA2B5C4FEE001EDD18 /* ContentView.swift in Sources */,
 				1737562B2B5C96FE001EDD18 /* SettingsButton.swift in Sources */,

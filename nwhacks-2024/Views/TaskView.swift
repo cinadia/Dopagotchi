@@ -12,23 +12,39 @@ struct TaskView: View {
     
     var body: some View {
         
-        Grid {
+        Grid(horizontalSpacing: 70) {
             GridRow {
-                AppsButton(icon: Image("cat"))
-                MainsButton(icon: Image("cat"))
+                customFontText("starter")
+                customFontText("main")
             }
-            .padding()
             GridRow {
-                SidesButton(icon: Image("cat"))
-                DessertsButton(icon: Image("cat"))
+                AppsButton(icon: Image("app"))
+                MainsButton(icon: Image("main"))
             }
-            .padding()
+            
             GridRow {
-                SpecialsButton(icon: Image("cat"))
-                SettingsButton(icon: Image("cat"))
+                customFontText("sides")
+                customFontText("desserts")
+            }
+            GridRow {
+                SidesButton(icon: Image("side"))
+                DessertsButton(icon: Image("dessert"))
+            }
+            
+            GridRow {
+                customFontText("specials")
+                customFontText("settings")
+            }
+            GridRow {
+                SpecialsButton(icon: Image("special"))
+                SettingsButton(icon: Image("settings"))
             }
             .padding()
         }.environmentObject(pet)
+    }
+    
+    func customFontText(_ text: String) -> some View {
+        Text(text).customFont()
     }
 }
 

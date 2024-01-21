@@ -12,18 +12,18 @@ struct TaskView: View {
         
         Grid {
             GridRow {
-                TaskButton(icon: Image("cat"))
-                TaskButton(icon: Image("cat"))
+                AppsButton(icon: Image("cat"))
+                MainsButton(icon: Image("cat"))
             }
             .padding()
             GridRow {
-                TaskButton(icon: Image("cat"))
-                TaskButton(icon: Image("cat"))
+                SidesButton(icon: Image("cat"))
+                DessertsButton(icon: Image("cat"))
             }
             .padding()
             GridRow {
-                TaskButton(icon: Image("cat"))
-                TaskButton(icon: Image("cat"))
+                SpecialsButton(icon: Image("cat"))
+                SettingsButton(icon: Image("cat"))
             }
             .padding()
         }

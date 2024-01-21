@@ -1,5 +1,5 @@
 //
-//  TaskButton.swift
+//  MainsButton.swift
 //  nwhacks-2024
 //
 //  Created by Cindy Cui on 2024-01-20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TaskButton: View {    
+struct MainsButton: View {
     let icon: Image
     @State private var showingSheet = false
     let sheetView = MainsView()
@@ -28,5 +28,5 @@ struct TaskButton: View {
 }
 
 #Preview {
-    TaskButton(icon: Image("cat"))
+    MainsButton(icon: Image("cat"))
 }

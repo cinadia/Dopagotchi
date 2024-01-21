@@ -10,56 +10,63 @@ import SwiftData
 
 struct MainsView: View {
     @Environment(\.modelContext) private var modelContext
+    @Environment(\.dismiss) private var dismiss
     @Query private var items: [TaskItem]
     @State private var isAddingItem = false
     @State private var itemToAdd = ""
     @FocusState private var isAddItemFocused: Bool
-    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         NavigationSplitView {
             VStack {
-                List {
-                    ForEach(items) { item in
-                        Grid {
-                            GridRow {
-                                FeedButton()
-                                    .frame(maxHeight: 20)
-                                    .buttonStyle(FeedButtonStyle())
-                                Text(item.desc)
-                            }
-                        }
-                    }
-                    .onDelete(perform: deleteItems)
-                }
-                .toolbar(content: self.toolbarContent)
+                listOfMains
+                    .toolbar(content: self.toolbarContent)
                 
                 if isAddingItem {
-                    Form {
-                        Section(header: Text("Item to Add")) {
-                            HStack {
-                                TextField("Key in value", text: $itemToAdd)
-                                    .keyboardType(.default)
-                                    .focused($isAddItemFocused)
-                                
-                                Button(action: {
-                                    addItem()
-                                    isAddingItem = false
-                                    itemToAdd = ""
-                                }) {
-                                    Text("Done")
-                                }
-                            }
-                        }
-                    }
-                    .frame(height: 100)
+                    addingItem
                 }
             }
             .navigationTitle("Mains")
-            
         } detail: {
             Text("Select an item")
         }
+    }
+    
+    var listOfMains: some View {
+        List {
+            ForEach(items) { item in
+                Grid {
+                    GridRow {
+                        FeedButton()
+                            .frame(maxHeight: 20)
+                            .buttonStyle(FeedButtonStyle())
+                        Text(item.desc)
+                    }
+                }
+            }
+            .onDelete(perform: deleteItems)
+        }
+    }
+    
+    var addingItem: some View {
+        Form {
+            Section(header: Text("Item to Add")) {
+                HStack {
+                    TextField("Key in value", text: $itemToAdd)
+                        .keyboardType(.default)
+                        .focused($isAddItemFocused)
+                    
+                    Button(action: {
+                        addItem()
+                        isAddingItem = false
+                        itemToAdd = ""
+                    }) {
+                        Text("Done")
+                    }
+                }
+            }
+        }
+        .frame(height: 100)
     }
     
     private func addItem() {
@@ -102,6 +109,7 @@ extension MainsView {
             }
         }
 }
+
 #Preview {
     MainsView()
         .modelContainer(for: TaskItem.self, inMemory: true)

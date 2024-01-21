@@ -36,6 +36,9 @@
 		1737563F2B5CBD4C001EDD18 /* SHPinscher-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1737563E2B5CBD4C001EDD18 /* SHPinscher-Regular.otf */; };
 		173756432B5CBE40001EDD18 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173756422B5CBE40001EDD18 /* TextStyles.swift */; };
 		173756472B5CF5EC001EDD18 /* ShowingSheetKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173756462B5CF5EC001EDD18 /* ShowingSheetKey.swift */; };
+		173756492B5CFA47001EDD18 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173756482B5CFA47001EDD18 /* WelcomeView.swift */; };
+		1737564B2B5CFB7E001EDD18 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1737564A2B5CFB7E001EDD18 /* NextButton.swift */; };
+		1737564D2B5CFC93001EDD18 /* WelcomeSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1737564C2B5CFC93001EDD18 /* WelcomeSubView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,9 @@
 		173756402B5CBD84001EDD18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		173756422B5CBE40001EDD18 /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		173756462B5CF5EC001EDD18 /* ShowingSheetKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowingSheetKey.swift; sourceTree = "<group>"; };
+		173756482B5CFA47001EDD18 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		1737564A2B5CFB7E001EDD18 /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
+		1737564C2B5CFC93001EDD18 /* WelcomeSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSubView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,7 @@
 				173756262B5C96B5001EDD18 /* DessertsButton.swift */,
 				173756282B5C96D7001EDD18 /* SpecialsButton.swift */,
 				1737562A2B5C96FE001EDD18 /* SettingsButton.swift */,
+				1737564A2B5CFB7E001EDD18 /* NextButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -150,6 +157,8 @@
 				173756202B5C9629001EDD18 /* DessertsView.swift */,
 				173756222B5C965A001EDD18 /* SpecialsView.swift */,
 				1737562C2B5C9722001EDD18 /* SettingsView.swift */,
+				173756482B5CFA47001EDD18 /* WelcomeView.swift */,
+				1737564C2B5CFC93001EDD18 /* WelcomeSubView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -262,6 +271,7 @@
 				173756342B5CB5C9001EDD18 /* SideItem.swift in Sources */,
 				173756122B5C68EE001EDD18 /* MainsView.swift in Sources */,
 				173756302B5CB37C001EDD18 /* MainItem.swift in Sources */,
+				173756492B5CFA47001EDD18 /* WelcomeView.swift in Sources */,
 				173756362B5CB604001EDD18 /* DessertItem.swift in Sources */,
 				1737561C2B5C9518001EDD18 /* AppsView.swift in Sources */,
 				173756082B5C5DF6001EDD18 /* PetView.swift in Sources */,
@@ -270,6 +280,7 @@
 				173756142B5C84E9001EDD18 /* FeedButton.swift in Sources */,
 				173756382B5CB638001EDD18 /* SpecialItem.swift in Sources */,
 				173756272B5C96B5001EDD18 /* DessertsButton.swift in Sources */,
+				1737564D2B5CFC93001EDD18 /* WelcomeSubView.swift in Sources */,
 				173755FA2B5C4FEE001EDD18 /* ContentView.swift in Sources */,
 				1737562B2B5C96FE001EDD18 /* SettingsButton.swift in Sources */,
 				173755FC2B5C4FEE001EDD18 /* TaskItem.swift in Sources */,
@@ -280,6 +291,7 @@
 				1737560A2B5C5E19001EDD18 /* TaskView.swift in Sources */,
 				1737561F2B5C95DC001EDD18 /* SidesView.swift in Sources */,
 				173755F82B5C4FEE001EDD18 /* nwhacks_2024App.swift in Sources */,
+				1737564B2B5CFB7E001EDD18 /* NextButton.swift in Sources */,
 				1737562D2B5C9722001EDD18 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

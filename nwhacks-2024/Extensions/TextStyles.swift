@@ -13,5 +13,13 @@ extension Text {
         self.font(Font.custom("SHPinscher-Regular", size: 25))
     }
     
+    func customTitleFont() -> some View {
+        self.font(Font.custom("SHPinscher-Regular", size: 60))
+    }
+    
+    func customSmallFont() -> some View {
+        self.font(Font.custom("SHPinscher-Regular", size: 20))
+    }
+    
     
 }

@@ -9,10 +9,13 @@ import SwiftUI
 
 struct FeedButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
+     
         configuration.label
-            .padding(5)
+            .frame(width: 40, height: 40)
             .background(Color(red: 0.5, green: 0, blue: 0))
             .foregroundStyle(.white)
-            .clipShape(Capsule())
+            .clipShape(Circle())
+            .padding()
+            
     }
 }

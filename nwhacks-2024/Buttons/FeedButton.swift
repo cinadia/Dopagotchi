@@ -18,7 +18,9 @@ struct FeedButton: View {
             }
         } label: {
             Text("Feed")
+                .customSmallFont()
         }
+        .buttonStyle(FeedButtonStyle())
     }
 }
 

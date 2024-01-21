@@ -13,16 +13,24 @@ struct ContentView: View {
     @StateObject var pet = Pet()
 
     var body: some View {
-        if showHome {
-            VStack {
-                PetView().environmentObject(pet)
-                TaskView().environmentObject(pet)
+        NavigationView {
+            if showHome {
+                VStack {
+                    PetView().environmentObject(pet)
+                    TaskView().environmentObject(pet)
+                }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        InfoButton()
+                    }
+                }
+                .containerRelativeFrame([.horizontal, .vertical])
+                .background(pet.backgroundColor)
+            } else {
+                WelcomeView(showHome: $showHome)
             }
-            .containerRelativeFrame([.horizontal, .vertical])
-            .background(pet.backgroundColor)
-        } else {
-            WelcomeView(showHome: $showHome)
         }
+        
     }
 }
 

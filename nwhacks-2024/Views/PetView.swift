@@ -40,7 +40,3 @@ struct PetView: View {
         }
     }
 }
-
-#Preview {
-    PetView()
-}

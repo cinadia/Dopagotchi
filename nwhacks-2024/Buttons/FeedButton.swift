@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct FeedButton: View {
+    @EnvironmentObject var pet: Pet
+    
     var body: some View {
         Button {
-            print("feeding....")
+            if pet.health < 100 {
+                pet.health += 10
+                pet.activitiesCompleted += 1
+            }
         } label: {
             Text("Feed")
         }

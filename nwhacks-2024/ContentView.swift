@@ -9,9 +9,12 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+
+    @StateObject var pet = Pet()
+
     var body: some View {
-        PetView()
-        TaskView()
+        PetView().environmentObject(pet)
+        TaskView().environmentObject(pet)
     }
 }
 

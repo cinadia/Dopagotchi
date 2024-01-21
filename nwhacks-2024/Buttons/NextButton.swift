@@ -15,10 +15,10 @@ struct NextButton: View {
             showHome = true
         } label: {
             Text("Next")
-                .customSmallFont()
-               .frame(width: 40, height: 40)
+                .customFont()
+               .frame(width: 80, height: 80)
                .background(Color("ButtonColor"))
-               .foregroundStyle(.white)
+               .foregroundStyle(.black)
                .clipShape(Circle())
                .padding()
         }

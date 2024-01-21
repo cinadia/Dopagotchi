@@ -15,7 +15,7 @@ struct SaveButtonNewStyle: ButtonStyle {
         configuration.label
             .frame(width: 80, height: 80)
             .background(pet.buttonColor)
-            .foregroundStyle(.white)
+            .foregroundStyle(.black)
             .clipShape(Circle())
             .padding()
 

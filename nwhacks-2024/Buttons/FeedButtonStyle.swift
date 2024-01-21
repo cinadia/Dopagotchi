@@ -14,7 +14,7 @@ struct FeedButtonStyle: ButtonStyle {
         configuration.label
             .frame(width: 40, height: 40)
             .background(pet.buttonColor)
-            .foregroundStyle(.white)
+            .foregroundStyle(.black)
             .clipShape(Circle())
             .padding()
             

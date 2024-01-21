@@ -11,10 +11,12 @@ import SwiftData
 struct ContentView: View {
 //    @Environment(\.modelContext) private var modelContext
 //    @Query private var items: [TaskItem]
+    
+    @StateObject var pet = Pet()
 
     var body: some View {
-        PetView()
-        TaskView()
+        PetView().environmentObject(pet)
+        TaskView().environmentObject(pet)
     }
 }
 

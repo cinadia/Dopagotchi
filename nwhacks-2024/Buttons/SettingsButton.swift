@@ -19,6 +19,7 @@ struct SettingsButton: View {
             icon
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .frame(height: 60)
                 .padding()
         }
         .sheet(isPresented: $showingSheet) {

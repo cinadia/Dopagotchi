@@ -6,13 +6,26 @@
 //
 
 import SwiftUI
+import SwiftData
+
+class Pet: ObservableObject {
+    @Published var health = 60
+    @Published var name = "My Pet"
+    @Published var activitiesCompleted = 0
+}
 
 struct PetView: View {
+    @EnvironmentObject var pet: Pet
+    
     var body: some View {
-        Image("cat")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .padding()
+        VStack() {
+            Image(String(pet.health))
+            Image("cat")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding()
+            Text("Activities completed today: " + String(pet.activitiesCompleted))
+        }
     }
 }
 

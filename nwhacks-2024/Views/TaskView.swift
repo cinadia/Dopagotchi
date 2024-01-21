@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TaskView: View {
+    @EnvironmentObject var pet: Pet
+    
     var body: some View {
         
         Grid {
@@ -26,7 +28,7 @@ struct TaskView: View {
                 SettingsButton(icon: Image("cat"))
             }
             .padding()
-        }
+        }.environmentObject(pet)
     }
 }
 

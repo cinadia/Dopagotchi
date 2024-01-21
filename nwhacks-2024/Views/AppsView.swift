@@ -19,6 +19,12 @@ struct AppsView: View {
     var body: some View {
         NavigationSplitView {
             VStack {
+                Text("starters").customTitleFont()
+                Spacer()
+                Text("activites that are quick and don't suck you in")
+                    .customFont()
+                    .multilineTextAlignment(.center)
+                Image("app")
                 listOfApps
                     .toolbar(content: self.toolbarContent)
                 
@@ -26,7 +32,8 @@ struct AppsView: View {
                     addingItem
                 }
             }
-            .navigationTitle("Apps")
+            .containerRelativeFrame([.horizontal, .vertical])
+            .background(Color("BackgroundColor"))
         } detail: {
             Text("Select an item")
         }
@@ -45,7 +52,7 @@ struct AppsView: View {
                 }
             }
             .onDelete(perform: deleteItems)
-        }
+        }.scrollContentBackground(.hidden)
     }
     
     var addingItem: some View {

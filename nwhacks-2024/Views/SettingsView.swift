@@ -13,9 +13,13 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationSplitView {
-            settings
-                .toolbar(content: self.toolbarContent)
-                .navigationTitle("Settings")
+            VStack {
+                Text("settings").customTitleFont()
+                settings
+                    .toolbar(content: self.toolbarContent)
+            }
+            .containerRelativeFrame([.horizontal, .vertical])
+            .background(Color("BackgroundColor"))
         } detail: {
             Text("Customize settings")
         }

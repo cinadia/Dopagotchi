@@ -19,6 +19,13 @@ struct DessertsView: View {
     var body: some View {
         NavigationSplitView {
             VStack {
+                Text("desserts").customTitleFont()
+                    .padding()
+                Spacer()
+                Text("activities that don’t make you feel \n great if you overdo them")
+                    .customFont()
+                    .multilineTextAlignment(.center)
+                Image("dessert")
                 listOfDesserts
                     .toolbar(content: self.toolbarContent)
                 
@@ -26,7 +33,8 @@ struct DessertsView: View {
                     addingItem
                 }
             }
-            .navigationTitle("Desserts")
+            .containerRelativeFrame([.horizontal, .vertical])
+            .background(Color("BackgroundColor"))
         } detail: {
             Text("Select an item")
         }
@@ -45,7 +53,7 @@ struct DessertsView: View {
                 }
             }
             .onDelete(perform: deleteItems)
-        }
+        }.scrollContentBackground(.hidden)
     }
     
     var addingItem: some View {

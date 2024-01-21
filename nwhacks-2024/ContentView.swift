@@ -13,8 +13,12 @@ struct ContentView: View {
     @StateObject var pet = Pet()
 
     var body: some View {
-        PetView().environmentObject(pet)
-        TaskView().environmentObject(pet)
+        VStack {
+            PetView().environmentObject(pet)
+            TaskView().environmentObject(pet)
+        }
+            .containerRelativeFrame([.horizontal, .vertical])
+            .background(Color("BackgroundColor"))
     }
 }
 

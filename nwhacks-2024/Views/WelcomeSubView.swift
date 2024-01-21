@@ -38,7 +38,7 @@ struct WelcomeSubView: View {
                     .disabled(true)
             }
         }
-        .frame(height: 500)
+        .frame(height: 550)
     }
 }
 

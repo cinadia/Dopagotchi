@@ -22,7 +22,7 @@ struct WelcomeSubView: View {
             HStack(spacing: 2) {
                 ForEach((0..<3), id: \.self) { index in
                     Circle()
-                        .fill(index == self.index ? Color("ButtonColor") : Color("ButtonColor").opacity(0.5))
+                        .fill(index == self.index ? Color("ButtonColor") : Color("ButtonColor").opacity(0.2))
                         .frame(width: 20, height: 20)
                 }
             }
@@ -33,7 +33,7 @@ struct WelcomeSubView: View {
                     .padding()
             } else {
                 NextButton(showHome: $showHome)
-                    .opacity(0.5)
+                    .opacity(0)
                     .padding()
                     .disabled(true)
             }
@@ -48,11 +48,11 @@ struct CardView: View {
     var body: some View{
         switch index {
         case 0:
-            frogView(imageName: "FrogSparkle", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris")
+            frogView(imageName: "FrogSparkle", text: "Hello! I am your pet frog.")
         case 1:
-            frogView(imageName: "FrogHappy", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris")
+            frogView(imageName: "FrogHappy", text: "Sometimes I get hungry.")
         case 2:
-            frogView(imageName: "FrogSad", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris")
+            frogView(imageName: "FrogSad", text: "But you can feed me to keep me happy! Start by adding 'food' items in each category, which are tasks that will keep you happy, too. When you complete an activity, feed me!")
         default:
             frogView(imageName: "FrogSparkle", text: "default")
         }

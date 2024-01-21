@@ -15,7 +15,6 @@ struct WelcomeView: View {
             Text("Welcome")
                 .customTitleFont()
             WelcomeSubView(showHome: $showHome)
-                .background(Color("ButtonColor").opacity(0.2))
         }
         .containerRelativeFrame([.horizontal, .vertical])
         .background(Color("BackgroundColor"))

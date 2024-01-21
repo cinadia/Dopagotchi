@@ -11,7 +11,6 @@ struct TaskView: View {
     @EnvironmentObject var pet: Pet
     
     var body: some View {
-        
         Grid(horizontalSpacing: 70) {
             GridRow {
                 customFontText("starters")

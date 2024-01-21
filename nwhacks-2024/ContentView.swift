@@ -9,16 +9,20 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-
+    @State var showHome = false
     @StateObject var pet = Pet()
 
     var body: some View {
-        VStack {
-            PetView().environmentObject(pet)
-            TaskView().environmentObject(pet)
-        }
+        if showHome {
+            VStack {
+                PetView().environmentObject(pet)
+                TaskView().environmentObject(pet)
+            }
             .containerRelativeFrame([.horizontal, .vertical])
             .background(pet.backgroundColor)
+        } else {
+            WelcomeView(showHome: $showHome)
+        }
     }
 }
 

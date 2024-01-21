@@ -9,8 +9,8 @@ import SwiftUI
 import SwiftData
 
 class Pet: ObservableObject {
-    @Published var health = 60
-    @Published var name = "My Pet"
+    @Published var health = 20
+    @Published var name = "rock"
     @Published var activitiesCompleted = 0
 }
 
@@ -20,11 +20,23 @@ struct PetView: View {
     var body: some View {
         VStack() {
             Image(String(pet.health))
-            Image("cat")
+            Text("activities completed today: " + String(pet.activitiesCompleted))
+                .customFont()
+            Image(getFrog())
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .padding()
-            Text("Activities completed today: " + String(pet.activitiesCompleted))
+                .frame(maxHeight: 150)
+            Text(pet.name).customFont()
+        }
+    }
+    
+    private func getFrog() -> String {
+        if pet.health <= 30 {
+            return "FrogSad"
+        } else if pet.health < 100 {
+            return "FrogNeutral"
+        } else {
+            return "FrogHappy"
         }
     }
 }

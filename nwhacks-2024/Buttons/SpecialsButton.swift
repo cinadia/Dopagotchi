@@ -19,6 +19,7 @@ struct SpecialsButton: View {
             icon
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .frame(height: 50)
                 .padding()
         }
         .sheet(isPresented: $showingSheet) {

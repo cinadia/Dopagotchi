@@ -19,6 +19,7 @@ struct SidesButton: View {
             icon
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .frame(minHeight: 50)
                 .padding()
         }
         .sheet(isPresented: $showingSheet) {

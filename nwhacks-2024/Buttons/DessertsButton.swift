@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct DessertsButton: View {
+    let icon: Image
+    @State private var showingSheet = false
+    let sheetView = DessertsView()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            showingSheet.toggle()
+        } label: {
+            icon
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding()
+        }
+        .sheet(isPresented: $showingSheet) {
+            sheetView
+        }
     }
 }
 
 #Preview {
-    DessertsButton()
+    DessertsButton(icon: Image("cat"))
 }

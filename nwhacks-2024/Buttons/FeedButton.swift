@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FeedButton: View {
     @EnvironmentObject var pet: Pet
+    @Environment(\.showingSheet) var showingSheet
     
     var body: some View {
         Button {
@@ -16,6 +17,7 @@ struct FeedButton: View {
                 pet.health += 10
                 pet.activitiesCompleted += 1
             }
+            self.showingSheet?.wrappedValue = false
         } label: {
             Text("Feed")
                 .customSmallFont()

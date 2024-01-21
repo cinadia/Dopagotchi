@@ -23,6 +23,7 @@ struct SpecialsButton: View {
         }
         .sheet(isPresented: $showingSheet) {
             sheetView
+                .environment(\.showingSheet, self.$showingSheet)
         }
     }
 }

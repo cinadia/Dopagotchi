@@ -66,7 +66,7 @@ struct SettingsView: View {
             } label: {
                 Text("Save").customFont()
             }
-            .buttonStyle(SaveButtonStyle())
+            .buttonStyle(SaveButtonNewStyle())
         }
     }
 }

@@ -39,6 +39,7 @@
 		173756492B5CFA47001EDD18 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173756482B5CFA47001EDD18 /* WelcomeView.swift */; };
 		1737564B2B5CFB7E001EDD18 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1737564A2B5CFB7E001EDD18 /* NextButton.swift */; };
 		1737564D2B5CFC93001EDD18 /* WelcomeSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1737564C2B5CFC93001EDD18 /* WelcomeSubView.swift */; };
+		173756512B5D7E00001EDD18 /* SaveButtonNewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173756502B5D7E00001EDD18 /* SaveButtonNewStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		173756482B5CFA47001EDD18 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		1737564A2B5CFB7E001EDD18 /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
 		1737564C2B5CFC93001EDD18 /* WelcomeSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSubView.swift; sourceTree = "<group>"; };
+		173756502B5D7E00001EDD18 /* SaveButtonNewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButtonNewStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				173756282B5C96D7001EDD18 /* SpecialsButton.swift */,
 				1737562A2B5C96FE001EDD18 /* SettingsButton.swift */,
 				1737564A2B5CFB7E001EDD18 /* NextButton.swift */,
+				173756502B5D7E00001EDD18 /* SaveButtonNewStyle.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				1737560A2B5C5E19001EDD18 /* TaskView.swift in Sources */,
 				1737561F2B5C95DC001EDD18 /* SidesView.swift in Sources */,
 				173755F82B5C4FEE001EDD18 /* nwhacks_2024App.swift in Sources */,
+				173756512B5D7E00001EDD18 /* SaveButtonNewStyle.swift in Sources */,
 				1737564B2B5CFB7E001EDD18 /* NextButton.swift in Sources */,
 				1737562D2B5C9722001EDD18 /* SettingsView.swift in Sources */,
 			);

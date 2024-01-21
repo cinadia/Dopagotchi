@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SidesButton: View {
+    @EnvironmentObject var pet: Pet
     let icon: Image
     @State private var showingSheet = false
     let sheetView = SidesView()
@@ -21,7 +22,7 @@ struct SidesButton: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 60)
                 .background(Circle()
-                    .fill(Color("ButtonColor"))
+                    .fill(pet.buttonColor)
                     .frame(width: 90, height: 90)
                 )
                 .padding()

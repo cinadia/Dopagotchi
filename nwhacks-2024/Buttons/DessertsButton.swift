@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DessertsButton: View {
+    @EnvironmentObject var pet: Pet
     let icon: Image
     @State private var showingSheet = false
     let sheetView = DessertsView()
@@ -21,7 +22,7 @@ struct DessertsButton: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 60)
                 .background(Circle()
-                    .fill(Color("ButtonColor"))
+                    .fill(pet.buttonColor)
                     .frame(width: 90, height: 90)
                 )
                 .padding()

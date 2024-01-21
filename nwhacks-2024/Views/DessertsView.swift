@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct DessertsView: View {
+    @EnvironmentObject var pet: Pet
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     @Query private var items: [DessertItem]
@@ -34,7 +35,7 @@ struct DessertsView: View {
                 }
             }
             .containerRelativeFrame([.horizontal, .vertical])
-            .background(Color("BackgroundColor"))
+            .background(pet.backgroundColor)
         } detail: {
             Text("Select an item")
         }

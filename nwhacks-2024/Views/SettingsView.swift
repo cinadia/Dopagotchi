@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct SettingsView: View {
-    @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var pet: Pet
+    @Environment(\.dismiss) private var dismiss
+    @State var name: String
+    @State var numActivities: Int
+    @State var backgroundColor: Color
+    @State var buttonColor: Color
     
     var body: some View {
         NavigationSplitView {
@@ -19,7 +24,7 @@ struct SettingsView: View {
                     .toolbar(content: self.toolbarContent)
             }
             .containerRelativeFrame([.horizontal, .vertical])
-            .background(Color("BackgroundColor"))
+            .background(pet.backgroundColor)
         } detail: {
             Text("Customize settings")
         }
@@ -27,14 +32,41 @@ struct SettingsView: View {
     
     var settings: some View {
         VStack {
-            Text("pet name: " + pet.name).customFont()
-            Text("number of activities per day: 5").customFont()
-            HStack {
-                Text("colour theme: ").customFont()
-                Rectangle()
-                    .fill(Color("ButtonColor"))
-                    .frame(width: 20, height: 20)
+            Form {
+                HStack {
+                    Text("pet name:").customFont()
+                    TextField("rock", text: $name)
+                }
+                HStack {
+                    Text("number of activities per day:").customFont()
+                    TextField("5", value: $numActivities, format: .number)
+                }
+               
+                HStack {
+                    Text("button color:").customFont()
+                    ColorPicker("", selection: $buttonColor)
+                }
+                
+                HStack {
+                    Text("background color:").customFont()
+                    ColorPicker("", selection: $backgroundColor)
+                }
             }
+            .scrollContentBackground(.hidden)
+            
+            Spacer()
+            
+            Button {
+                pet.name = name
+                pet.numActivities = numActivities
+                pet.backgroundColor = backgroundColor
+                pet.buttonColor = buttonColor
+                
+                dismiss()
+            } label: {
+                Text("Save").customFont()
+            }
+            .buttonStyle(SaveButtonStyle())
         }
     }
 }
@@ -50,6 +82,6 @@ extension SettingsView {
         }
 }
 
-#Preview {
-    SettingsView()
-}
+//#Preview {
+//    SettingsView()
+//}

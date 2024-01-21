@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct SidesView: View {
+    @EnvironmentObject var pet: Pet
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     @Query private var items: [SideItem]
@@ -33,7 +34,7 @@ struct SidesView: View {
                 }
             }
             .containerRelativeFrame([.horizontal, .vertical])
-            .background(Color("BackgroundColor"))
+            .background(pet.backgroundColor)
         } detail: {
             Text("Select an item")
         }

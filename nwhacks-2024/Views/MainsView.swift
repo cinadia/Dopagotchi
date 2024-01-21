@@ -19,12 +19,12 @@ struct MainsView: View {
     var body: some View {
         NavigationSplitView {
             VStack {
-                Text("Starters").customTitleFont()
+                Text("mains").customTitleFont()
                 Spacer()
-                Text("Activites that are quick and don't suck you in")
+                Text("activities that take a bit longer")
                     .customFont()
                     .multilineTextAlignment(.center)
-                Image("app")
+                Image("main")
                 listOfMains
                     .toolbar(content: self.toolbarContent)
                 
@@ -32,6 +32,8 @@ struct MainsView: View {
                     addingItem
                 }
             }
+            .containerRelativeFrame([.horizontal, .vertical])
+            .background(Color("BackgroundColor"))
         } detail: {
             Text("Select an item")
         }
@@ -50,7 +52,7 @@ struct MainsView: View {
                 }
             }
             .onDelete(perform: deleteItems)
-        }
+        }.scrollContentBackground(.hidden)
     }
     
     var addingItem: some View {

@@ -19,14 +19,19 @@ struct SpecialsView: View {
     var body: some View {
         NavigationSplitView {
             VStack {
+                Text("specials").customTitleFont()
+                Spacer()
+                Text("activities that are expensive or less convenient")
+                    .customFont()
+                    .multilineTextAlignment(.center)
+                Image("specials")
                 listOfSpecials
                     .toolbar(content: self.toolbarContent)
-                
                 if isAddingItem {
                     addingItem
                 }
             }
-            .navigationTitle("Specials")
+            .background(Color("BackgroundColor"))
         } detail: {
             Text("Select an item")
         }
@@ -45,7 +50,7 @@ struct SpecialsView: View {
                 }
             }
             .onDelete(perform: deleteItems)
-        }
+        }.scrollContentBackground(.hidden)
     }
     
     var addingItem: some View {

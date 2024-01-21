@@ -12,7 +12,7 @@ struct FeedButtonStyle: ButtonStyle {
      
         configuration.label
             .frame(width: 40, height: 40)
-            .background(Color(red: 0.5, green: 0, blue: 0))
+            .background(Color("ButtonColor"))
             .foregroundStyle(.white)
             .clipShape(Circle())
             .padding()

@@ -19,7 +19,11 @@ struct AppsButton: View {
             icon
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(height: 60)
+                .frame(height: 50)
+                .background(Circle()
+                    .fill(Color("ButtonColor"))
+                    .frame(width: 90, height: 90)
+                )
                 .padding()
         }
         .sheet(isPresented: $showingSheet) {

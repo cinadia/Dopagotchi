@@ -14,8 +14,8 @@ struct TaskView: View {
         
         Grid(horizontalSpacing: 70) {
             GridRow {
-                customFontText("starter")
-                customFontText("main")
+                customFontText("starters")
+                customFontText("mains")
             }
             GridRow {
                 AppsButton(icon: Image("app"))

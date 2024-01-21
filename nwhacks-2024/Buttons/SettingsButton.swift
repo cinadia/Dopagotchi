@@ -20,6 +20,10 @@ struct SettingsButton: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 60)
+                .background(Circle()
+                    .fill(Color("ButtonColor"))
+                    .frame(width: 90, height: 90)
+                )
                 .padding()
         }
         .sheet(isPresented: $showingSheet) {

@@ -19,6 +19,12 @@ struct SidesView: View {
     var body: some View {
         NavigationSplitView {
             VStack {
+                Text("sides").customTitleFont()
+                Spacer()
+                Text("activities that you can add to other activities to make it more enjoyable")
+                    .customFont()
+                    .multilineTextAlignment(.center)
+                Image("side")
                 listOfSides
                     .toolbar(content: self.toolbarContent)
                 
@@ -26,7 +32,8 @@ struct SidesView: View {
                     addingItem
                 }
             }
-            .navigationTitle("Sides")
+            .containerRelativeFrame([.horizontal, .vertical])
+            .background(Color("BackgroundColor"))
         } detail: {
             Text("Select an item")
         }
@@ -45,7 +52,7 @@ struct SidesView: View {
                 }
             }
             .onDelete(perform: deleteItems)
-        }
+        }.scrollContentBackground(.hidden)
     }
     
     var addingItem: some View {

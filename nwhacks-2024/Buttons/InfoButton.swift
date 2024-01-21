@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct InfoButton: View {
+    @EnvironmentObject var pet: Pet
     @State private var showingInfoSheet = false
     
     var body: some View {
@@ -16,7 +17,7 @@ struct InfoButton: View {
         } label: {
             Image("questionmark")
                .frame(width: 40, height: 40)
-               .background(Color("ButtonColor"))
+               .background(pet.buttonColor)
                .foregroundStyle(.white)
                .clipShape(Circle())
                .padding()

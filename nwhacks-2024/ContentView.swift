@@ -30,6 +30,7 @@ struct ContentView: View {
                 WelcomeView(showHome: $showHome)
             }
         }
+        .environmentObject(pet)
         
     }
 }

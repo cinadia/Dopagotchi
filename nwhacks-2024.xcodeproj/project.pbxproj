@@ -35,6 +35,7 @@
 		173756382B5CB638001EDD18 /* SpecialItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173756372B5CB638001EDD18 /* SpecialItem.swift */; };
 		1737563F2B5CBD4C001EDD18 /* SHPinscher-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1737563E2B5CBD4C001EDD18 /* SHPinscher-Regular.otf */; };
 		173756432B5CBE40001EDD18 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173756422B5CBE40001EDD18 /* TextStyles.swift */; };
+		173756472B5CF5EC001EDD18 /* ShowingSheetKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173756462B5CF5EC001EDD18 /* ShowingSheetKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		1737563E2B5CBD4C001EDD18 /* SHPinscher-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SHPinscher-Regular.otf"; sourceTree = "<group>"; };
 		173756402B5CBD84001EDD18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		173756422B5CBE40001EDD18 /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
+		173756462B5CF5EC001EDD18 /* ShowingSheetKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowingSheetKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				173756422B5CBE40001EDD18 /* TextStyles.swift */,
+				173756462B5CF5EC001EDD18 /* ShowingSheetKey.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				1737562B2B5C96FE001EDD18 /* SettingsButton.swift in Sources */,
 				173755FC2B5C4FEE001EDD18 /* TaskItem.swift in Sources */,
 				173756212B5C9629001EDD18 /* DessertsView.swift in Sources */,
+				173756472B5CF5EC001EDD18 /* ShowingSheetKey.swift in Sources */,
 				173756292B5C96D7001EDD18 /* SpecialsButton.swift in Sources */,
 				173756232B5C965A001EDD18 /* SpecialsView.swift in Sources */,
 				1737560A2B5C5E19001EDD18 /* TaskView.swift in Sources */,

@@ -13,10 +13,8 @@ import SwiftUI
 final class TaskItem: Identifiable {
     var id = UUID()
     var desc: String
-    var type: String?
-    // TODO: @relationship for deleting values?
-    init(description: String, type: String?) {
+
+    init(description: String) {
         self.desc = description
-        self.type = type
     }
 }

@@ -40,14 +40,11 @@ struct TaskView: View {
                 SettingsButton(icon: Image("settings"))
             }
             .padding()
-        }.environmentObject(pet)
+        }
+        .environmentObject(pet)
     }
     
     func customFontText(_ text: String) -> some View {
         Text(text).customFont()
     }
-}
-
-#Preview {
-    TaskView()
 }

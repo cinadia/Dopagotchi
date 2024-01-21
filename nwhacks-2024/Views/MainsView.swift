@@ -19,6 +19,12 @@ struct MainsView: View {
     var body: some View {
         NavigationSplitView {
             VStack {
+                Text("Starters").customTitleFont()
+                Spacer()
+                Text("Activites that are quick and don't suck you in")
+                    .customFont()
+                    .multilineTextAlignment(.center)
+                Image("app")
                 listOfMains
                     .toolbar(content: self.toolbarContent)
                 
@@ -26,7 +32,6 @@ struct MainsView: View {
                     addingItem
                 }
             }
-            .navigationTitle("Mains")
         } detail: {
             Text("Select an item")
         }
@@ -38,7 +43,7 @@ struct MainsView: View {
                 Grid {
                     GridRow {
                         FeedButton()
-                            .frame(maxHeight: 20)
+                            .frame(maxHeight: 40)
                             .buttonStyle(FeedButtonStyle())
                         Text(item.desc)
                     }

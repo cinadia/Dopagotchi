@@ -13,32 +13,31 @@ struct TaskView: View {
     var body: some View {
         Grid(horizontalSpacing: 70) {
             GridRow {
-                customFontText("starters")
-                customFontText("mains")
-            }
-            GridRow {
                 AppsButton(icon: Image("app"))
                 MainsButton(icon: Image("main"))
             }
-            
             GridRow {
-                customFontText("sides")
-                customFontText("desserts")
+                customFontText("starters")
+                customFontText("mains")
             }
+            
             GridRow {
                 SidesButton(icon: Image("side"))
                 DessertsButton(icon: Image("dessert"))
             }
-            
             GridRow {
-                customFontText("specials")
-                customFontText("settings")
+                customFontText("sides")
+                customFontText("desserts")
             }
+            
             GridRow {
                 SpecialsButton(icon: Image("special"))
                 SettingsButton(icon: Image("settings"))
             }
-            .padding()
+            GridRow {
+                customFontText("specials")
+                customFontText("settings")
+            }
         }
         .environmentObject(pet)
     }

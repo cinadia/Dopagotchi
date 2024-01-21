@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SpecialsButton: View {
+    @EnvironmentObject var pet: Pet
     let icon: Image
     @State private var showingSheet = false
     let sheetView = SpecialsView()
@@ -21,7 +22,7 @@ struct SpecialsButton: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 50)
                 .background(Circle()
-                    .fill(Color("ButtonColor"))
+                    .fill(pet.buttonColor)
                     .frame(width: 90, height: 90)
                 )
                 .padding()

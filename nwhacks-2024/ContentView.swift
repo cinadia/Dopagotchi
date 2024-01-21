@@ -19,11 +19,10 @@ struct ContentView: View {
                 TaskView().environmentObject(pet)
             }
             .containerRelativeFrame([.horizontal, .vertical])
-            .background(Color("BackgroundColor"))
+            .background(pet.backgroundColor)
         } else {
             WelcomeView(showHome: $showHome)
         }
-        
     }
 }
 

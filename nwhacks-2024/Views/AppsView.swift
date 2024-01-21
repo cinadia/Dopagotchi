@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct AppsView: View {
+    @EnvironmentObject var pet: Pet
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     @Query private var items: [AppItem]
@@ -33,7 +34,7 @@ struct AppsView: View {
                 }
             }
             .containerRelativeFrame([.horizontal, .vertical])
-            .background(Color("BackgroundColor"))
+            .background(pet.backgroundColor)
         } detail: {
             Text("Select an item")
         }

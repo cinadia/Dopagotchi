@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct SpecialsView: View {
+    @EnvironmentObject var pet: Pet
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     @Query private var items: [SpecialItem]
@@ -31,7 +32,7 @@ struct SpecialsView: View {
                     addingItem
                 }
             }
-            .background(Color("BackgroundColor"))
+            .background(pet.backgroundColor)
         } detail: {
             Text("Select an item")
         }

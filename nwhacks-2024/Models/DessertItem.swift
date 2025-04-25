@@ -18,3 +18,5 @@ final class DessertItem: Identifiable {
         self.desc = description
     }
 }
+
+extension DessertItem: DescribableItem {}

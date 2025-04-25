@@ -18,3 +18,6 @@ final class MainItem: Identifiable {
         self.desc = description
     }
 }
+
+extension MainItem: DescribableItem {}
+

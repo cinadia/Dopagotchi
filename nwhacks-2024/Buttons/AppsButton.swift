@@ -8,29 +8,14 @@
 import SwiftUI
 
 struct AppsButton: View {
-    @EnvironmentObject var pet: Pet
     let icon: Image
-    @State private var showingSheet = false
-    let sheetView = AppsView()
     
     var body: some View {
-        Button {
-            showingSheet.toggle()
-        } label: {
-            icon
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 50)
-                .background(Circle()
-                    .fill(pet.buttonColor)
-                    .frame(width: 90, height: 90)
-                )
-                .padding()
-        }
-        .sheet(isPresented: $showingSheet) {
-            sheetView
-                .environment(\.showingSheet, self.$showingSheet)
-        }
+        ItemButton(
+            icon: icon,
+            iconHeight: 50,
+            sheetContent: { AppsView() }
+        )
     }
 }
 

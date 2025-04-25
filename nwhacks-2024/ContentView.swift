@@ -11,7 +11,7 @@ import SwiftData
 struct ContentView: View {
     @State var showHome = false
     @StateObject var pet = Pet()
-
+    
     var body: some View {
         NavigationView {
             if showHome {

@@ -22,7 +22,7 @@ struct PetView: View {
     @EnvironmentObject var pet: Pet
     
     var body: some View {
-        VStack() {
+        VStack {
             Image(String(pet.health))
             Text("activities completed today: " + String(pet.activitiesCompleted))
                 .customFont()
@@ -48,7 +48,3 @@ struct PetView: View {
         }
     }
 }
-
-//#Preview {
-////    PetView()
-//}

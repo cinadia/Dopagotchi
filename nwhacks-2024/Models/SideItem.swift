@@ -18,3 +18,6 @@ final class SideItem: Identifiable {
         self.desc = description
     }
 }
+
+extension SideItem: DescribableItem {}
+

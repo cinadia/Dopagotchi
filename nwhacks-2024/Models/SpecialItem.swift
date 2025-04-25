@@ -18,3 +18,5 @@ final class SpecialItem: Identifiable {
         self.desc = description
     }
 }
+
+extension SpecialItem: DescribableItem {}

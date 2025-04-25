@@ -19,6 +19,7 @@ struct WelcomeSubView: View {
                 }
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            
             HStack(spacing: 2) {
                 ForEach((0..<3), id: \.self) { index in
                     Circle()

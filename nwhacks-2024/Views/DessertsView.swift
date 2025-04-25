@@ -9,114 +9,14 @@ import SwiftUI
 import SwiftData
 
 struct DessertsView: View {
-    @EnvironmentObject var pet: Pet
-    @Environment(\.modelContext) private var modelContext
-    @Environment(\.dismiss) private var dismiss
-    @Query private var items: [DessertItem]
-    @State private var isAddingItem = false
-    @State private var itemToAdd = ""
-    @FocusState private var isAddItemFocused: Bool
-    
     var body: some View {
-        NavigationSplitView {
-            VStack {
-                Text("desserts").customTitleFont()
-                    .padding()
-                Spacer()
-                Text("activities that don’t make you feel \n great if you overdo them")
-                    .customFont()
-                    .multilineTextAlignment(.center)
-                Image("dessert")
-                listOfDesserts
-                    .toolbar(content: self.toolbarContent)
-                
-                if isAddingItem {
-                    addingItem
-                }
-            }
-            .containerRelativeFrame([.horizontal, .vertical])
-            .background(pet.backgroundColor)
-        } detail: {
-            Text("Select an item")
-        }
+        ItemView<DessertItem>(
+            title: "desserts",
+            subtitle: "activities that don’t make you feel \n great if you overdo them", // TODO: resizing text to fit screen
+            imageName: "dessert",
+            createItem: { DessertItem(description: $0) }
+        )
     }
-    
-    var listOfDesserts: some View {
-        List {
-            ForEach(items) { item in
-                Grid {
-                    GridRow {
-                        FeedButton()
-                            .frame(maxHeight: 20)
-                            .buttonStyle(FeedButtonStyle())
-                        Text(item.desc)
-                    }
-                }
-            }
-            .onDelete(perform: deleteItems)
-        }.scrollContentBackground(.hidden)
-    }
-    
-    var addingItem: some View {
-        Form {
-            Section(header: Text("Item to Add")) {
-                HStack {
-                    TextField("Key in value", text: $itemToAdd)
-                        .keyboardType(.default)
-                        .focused($isAddItemFocused)
-                    
-                    Button(action: {
-                        addItem()
-                        isAddingItem = false
-                        itemToAdd = ""
-                    }) {
-                        Text("Done")
-                    }
-                }
-            }
-        }
-        .frame(height: 100)
-    }
-    
-    private func addItem() {
-        withAnimation {
-            if (itemToAdd != "") {
-                let newItem = DessertItem(description: itemToAdd)
-                modelContext.insert(newItem)
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
-    }
-}
-
-extension DessertsView {
-    @ToolbarContentBuilder
-        func toolbarContent() -> some ToolbarContent {
-            ToolbarItem(placement: .navigationBarLeading) {
-                EditButton()
-            }
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button("Dismiss") {
-                    dismiss()
-                }
-            }
-            ToolbarItem {
-                Button(action: {
-                    isAddingItem.toggle()
-                    isAddItemFocused.toggle()
-                    itemToAdd = ""
-                }) {
-                    Label("Add Item", systemImage: "plus")
-                }
-            }
-        }
 }
 
 #Preview {

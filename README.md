@@ -1,6 +1,6 @@
 # Dopagotchi
 
-Take care of a virtual pet by taking care of yourself!
+Take care of yourself by taking care of a virtual pet!
 
 ## Table of Contents
 

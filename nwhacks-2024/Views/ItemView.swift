@@ -67,7 +67,7 @@ struct ItemView<ItemType: PersistentModel>: View where ItemType: Identifiable {
         Form {
             Section(header: Text("Item to Add")) {
                 HStack {
-                    TextField("Key in value", text: $itemToAdd)
+                    TextField("New item", text: $itemToAdd)
                         .keyboardType(.default)
                         .focused($isAddItemFocused)
                     

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		173755F82B5C4FEE001EDD18 /* nwhacks_2024App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173755F72B5C4FEE001EDD18 /* nwhacks_2024App.swift */; };
 		173755FA2B5C4FEE001EDD18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173755F92B5C4FEE001EDD18 /* ContentView.swift */; };
-		173755FC2B5C4FEE001EDD18 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173755FB2B5C4FEE001EDD18 /* TaskItem.swift */; };
 		173755FE2B5C4FF0001EDD18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173755FD2B5C4FF0001EDD18 /* Assets.xcassets */; };
 		173756012B5C4FF0001EDD18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173756002B5C4FF0001EDD18 /* Preview Assets.xcassets */; };
 		173756082B5C5DF6001EDD18 /* PetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173756072B5C5DF6001EDD18 /* PetView.swift */; };
@@ -51,7 +50,6 @@
 		173755F42B5C4FEE001EDD18 /* nwhacks-2024.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nwhacks-2024.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		173755F72B5C4FEE001EDD18 /* nwhacks_2024App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nwhacks_2024App.swift; sourceTree = "<group>"; };
 		173755F92B5C4FEE001EDD18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		173755FB2B5C4FEE001EDD18 /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
 		173755FD2B5C4FF0001EDD18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		173756002B5C4FF0001EDD18 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		173756072B5C5DF6001EDD18 /* PetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetView.swift; sourceTree = "<group>"; };
@@ -184,7 +182,6 @@
 		1737562E2B5CB36C001EDD18 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				173755FB2B5C4FEE001EDD18 /* TaskItem.swift */,
 				1737562F2B5CB37C001EDD18 /* MainItem.swift */,
 				173756312B5CB53A001EDD18 /* AppItem.swift */,
 				173756332B5CB5C9001EDD18 /* SideItem.swift */,
@@ -312,7 +309,6 @@
 				1737564D2B5CFC93001EDD18 /* WelcomeSubView.swift in Sources */,
 				173755FA2B5C4FEE001EDD18 /* ContentView.swift in Sources */,
 				1737562B2B5C96FE001EDD18 /* SettingsButton.swift in Sources */,
-				173755FC2B5C4FEE001EDD18 /* TaskItem.swift in Sources */,
 				173756212B5C9629001EDD18 /* DessertsView.swift in Sources */,
 				173756472B5CF5EC001EDD18 /* ShowingSheetKey.swift in Sources */,
 				173756292B5C96D7001EDD18 /* SpecialsButton.swift in Sources */,

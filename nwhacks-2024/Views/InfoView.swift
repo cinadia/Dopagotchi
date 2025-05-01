@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct InfoView: View {
-    @EnvironmentObject var pet: Pet
+    @Environment(Pet.self) var pet
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -37,7 +37,7 @@ struct InfoView: View {
             }
             .frame(width: 300, height: 800)
             .containerRelativeFrame([.horizontal, .vertical])
-            .background(Color(pet.backgroundColor))
+            .background(pet.backgroundColor)
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {

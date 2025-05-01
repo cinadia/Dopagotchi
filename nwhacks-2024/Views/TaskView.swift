@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TaskView: View {
-    @EnvironmentObject var pet: Pet
-    
+    @Environment(Pet.self) var pet
+
     var body: some View {
         Grid(horizontalSpacing: 70) {
             GridRow {
@@ -39,7 +39,7 @@ struct TaskView: View {
                 customFontText("settings")
             }
         }
-        .environmentObject(pet)
+        .environment(pet)
     }
     
     func customFontText(_ text: String) -> some View {

@@ -12,6 +12,8 @@ import SwiftData
 struct nwhacks_2024App: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
+            User.self,
+            Pet.self,
             MainItem.self,
             AppItem.self,
             SideItem.self,

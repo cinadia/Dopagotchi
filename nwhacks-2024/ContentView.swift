@@ -10,25 +10,48 @@ import SwiftData
 
 struct ContentView: View {
     @State var showHome: Bool
-    @StateObject var pet = Pet()
+    @Query var pets: [Pet]
+    @Query var users: [User]
+    @Environment(\.modelContext) var context
+    
+    // Try to get the existing user, or create a new one
+    var user: User {
+        if let existingUser = users.first {
+            return existingUser
+        } else {
+            let newUser = User()
+            context.insert(newUser)
+            try? context.save()
+            return newUser
+        }
+    }
     
     init() {
         // Check if the app has launched before
         let hasLaunchedBefore = UserDefaults.standard.bool(forKey: "hasLaunchedBefore")
         _showHome = State(initialValue: hasLaunchedBefore)
         
-        // If it's the first launch, mark it as launched
         if !hasLaunchedBefore {
             UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
         }
     }
     
     var body: some View {
+        var activePet: Pet {
+            user.pets.first(where: { $0.isActive }) ?? {
+                // (this shouldn't be hit)
+                let fallback = Pet()
+                user.pets.append(fallback)
+                try? context.save()
+                return fallback
+            }()
+        }
+        
         NavigationView {
             if showHome {
                 VStack {
-                    PetView().environmentObject(pet)
-                    TaskView().environmentObject(pet)
+                    PetView().environment(activePet)
+                    TaskView().environment(activePet)
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -36,12 +59,12 @@ struct ContentView: View {
                     }
                 }
                 .containerRelativeFrame([.horizontal, .vertical])
-                .background(pet.backgroundColor)
+                .background(activePet.backgroundColor)
             } else {
                 WelcomeView(showHome: $showHome)
             }
         }
-        .environmentObject(pet)
+        .environment(activePet)
         
     }
 }

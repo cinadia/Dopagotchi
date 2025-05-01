@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct InfoButton: View {
-    @EnvironmentObject var pet: Pet
+    @Environment(Pet.self) var pet
     @State private var showingInfoSheet = false
     
     var body: some View {

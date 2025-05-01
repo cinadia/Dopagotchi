@@ -44,6 +44,9 @@
 		17C59A302DC2EFC100D9DBFE /* DescribableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C59A2F2DC2EFBF00D9DBFE /* DescribableItem.swift */; };
 		17C59A322DC2EFE000D9DBFE /* ItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C59A312DC2EFDF00D9DBFE /* ItemButton.swift */; };
 		17C59A342DC2F01000D9DBFE /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C59A332DC2F00E00D9DBFE /* ItemView.swift */; };
+		17C59A382DC2F72400D9DBFE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C59A372DC2F72300D9DBFE /* User.swift */; };
+		17C59A3A2DC2F89200D9DBFE /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C59A392DC2F89000D9DBFE /* Pet.swift */; };
+		17C59A3C2DC31D0600D9DBFE /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C59A3B2DC31D0000D9DBFE /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +89,9 @@
 		17C59A2F2DC2EFBF00D9DBFE /* DescribableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescribableItem.swift; sourceTree = "<group>"; };
 		17C59A312DC2EFDF00D9DBFE /* ItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemButton.swift; sourceTree = "<group>"; };
 		17C59A332DC2F00E00D9DBFE /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		17C59A372DC2F72300D9DBFE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		17C59A392DC2F89000D9DBFE /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		17C59A3B2DC31D0000D9DBFE /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +188,8 @@
 		1737562E2B5CB36C001EDD18 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				17C59A392DC2F89000D9DBFE /* Pet.swift */,
+				17C59A372DC2F72300D9DBFE /* User.swift */,
 				1737562F2B5CB37C001EDD18 /* MainItem.swift */,
 				173756312B5CB53A001EDD18 /* AppItem.swift */,
 				173756332B5CB5C9001EDD18 /* SideItem.swift */,
@@ -202,6 +210,7 @@
 		173756412B5CBE2A001EDD18 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				17C59A3B2DC31D0000D9DBFE /* ColorExtension.swift */,
 				173756422B5CBE40001EDD18 /* TextStyles.swift */,
 				173756462B5CF5EC001EDD18 /* ShowingSheetKey.swift */,
 			);
@@ -287,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17C59A3C2DC31D0600D9DBFE /* ColorExtension.swift in Sources */,
 				173756102B5C6098001EDD18 /* MainsButton.swift in Sources */,
 				1737561A2B5C94F7001EDD18 /* AppsButton.swift in Sources */,
 				173756432B5CBE40001EDD18 /* TextStyles.swift in Sources */,
@@ -300,6 +310,7 @@
 				1737561C2B5C9518001EDD18 /* AppsView.swift in Sources */,
 				173756082B5C5DF6001EDD18 /* PetView.swift in Sources */,
 				173756252B5C968E001EDD18 /* SidesButton.swift in Sources */,
+				17C59A382DC2F72400D9DBFE /* User.swift in Sources */,
 				173756322B5CB53A001EDD18 /* AppItem.swift in Sources */,
 				173756142B5C84E9001EDD18 /* FeedButton.swift in Sources */,
 				173756382B5CB638001EDD18 /* SpecialItem.swift in Sources */,
@@ -309,6 +320,7 @@
 				1737564D2B5CFC93001EDD18 /* WelcomeSubView.swift in Sources */,
 				173755FA2B5C4FEE001EDD18 /* ContentView.swift in Sources */,
 				1737562B2B5C96FE001EDD18 /* SettingsButton.swift in Sources */,
+				17C59A3A2DC2F89200D9DBFE /* Pet.swift in Sources */,
 				173756212B5C9629001EDD18 /* DessertsView.swift in Sources */,
 				173756472B5CF5EC001EDD18 /* ShowingSheetKey.swift in Sources */,
 				173756292B5C96D7001EDD18 /* SpecialsButton.swift in Sources */,

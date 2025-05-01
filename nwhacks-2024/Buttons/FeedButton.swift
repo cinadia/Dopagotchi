@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FeedButton: View {
-    @EnvironmentObject var pet: Pet
+    @Environment(Pet.self) var pet
     @Environment(\.showingSheet) var showingSheet
     
     var body: some View {
@@ -17,12 +17,12 @@ struct FeedButton: View {
                 pet.health += 10
             }
             pet.activitiesCompleted += 1
-            pet.isSparkle = true
+           // pet.isSparkle = true TODO: animations
             self.showingSheet?.wrappedValue = false
             
             Task {
                 try await Task.sleep(nanoseconds: 2_000_000_000)
-                pet.isSparkle = false
+               // pet.isSparkle = false TODO: bring back 'animations'
             }
             
         } label: {

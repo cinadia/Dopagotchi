@@ -9,8 +9,19 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @State var showHome = false
+    @State var showHome: Bool
     @StateObject var pet = Pet()
+    
+    init() {
+        // Check if the app has launched before
+        let hasLaunchedBefore = UserDefaults.standard.bool(forKey: "hasLaunchedBefore")
+        _showHome = State(initialValue: hasLaunchedBefore)
+        
+        // If it's the first launch, mark it as launched
+        if !hasLaunchedBefore {
+            UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
+        }
+    }
     
     var body: some View {
         NavigationView {

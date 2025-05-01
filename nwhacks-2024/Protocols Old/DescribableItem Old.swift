@@ -6,5 +6,5 @@
 //
 
 protocol DescribableItem {
-    var desc: String? { get }
+    var desc: String { get }
 }

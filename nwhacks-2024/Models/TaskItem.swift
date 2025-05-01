@@ -10,7 +10,7 @@ import SwiftData
 import SwiftUI
 
 @Model
-final class TaskItem: Identifiable {
+final class TaskItem: Identifiable { // TODO: use this as a superclass
     var id = UUID()
     var desc: String
 

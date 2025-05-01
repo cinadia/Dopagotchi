@@ -12,9 +12,9 @@ import SwiftUI
 @Model
 final class MainItem: Identifiable {
     var id = UUID()
-    var desc: String
+    var desc: String?
 
-    init(description: String) {
+    init(description: String?) {
         self.desc = description
     }
 }

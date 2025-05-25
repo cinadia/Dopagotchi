@@ -9,9 +9,8 @@ import SwiftUI
 
 struct SettingsButton: View {
     let icon: Image
-    @EnvironmentObject var pet: Pet
+    @Environment(Pet.self) var pet
     @State private var showingSheet = false
-//    let sheetView = SettingsView(name: pet.name)
     
     var body: some View {
         Button {
@@ -28,7 +27,7 @@ struct SettingsButton: View {
                 .padding()
         }
         .sheet(isPresented: $showingSheet) {
-            SettingsView(name: pet.name, numActivities: pet.numActivities, backgroundColor: pet.backgroundColor, buttonColor: pet.buttonColor)
+            SettingsView(pet: pet)
         }
     }
 }

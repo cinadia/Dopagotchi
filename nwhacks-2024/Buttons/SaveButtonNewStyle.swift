@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SaveButtonNewStyle: ButtonStyle {
-    @EnvironmentObject var pet: Pet
+    @Environment(Pet.self) var pet
     
     func makeBody(configuration: Configuration) -> some View {
 

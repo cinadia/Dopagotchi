@@ -9,12 +9,9 @@ import SwiftUI
 import SwiftData
 
 struct SettingsView: View {
-    @EnvironmentObject var pet: Pet
+    @Environment(\.modelContext) private var context
+    @Bindable var pet: Pet
     @Environment(\.dismiss) private var dismiss
-    @State var name: String
-    @State var numActivities: Int
-    @State var backgroundColor: Color
-    @State var buttonColor: Color
     
     var body: some View {
         NavigationSplitView {
@@ -35,21 +32,21 @@ struct SettingsView: View {
             Form {
                 HStack {
                     Text("pet name:").customFont()
-                    TextField("rock", text: $name)
+                    TextField(pet.name, text: $pet.name)
                 }
                 HStack {
                     Text("number of activities per day:").customFont()
-                    TextField("5", value: $numActivities, format: .number)
+                    TextField(String(pet.numActivities), value: $pet.numActivities, format: .number)
                 }
                
                 HStack {
                     Text("button color:").customFont()
-                    ColorPicker("", selection: $buttonColor)
+                    ColorPicker("", selection: $pet.buttonColor)
                 }
                 
                 HStack {
                     Text("background color:").customFont()
-                    ColorPicker("", selection: $backgroundColor)
+                    ColorPicker("", selection: $pet.backgroundColor)
                 }
             }
             .scrollContentBackground(.hidden)
@@ -57,10 +54,11 @@ struct SettingsView: View {
             Spacer()
             
             Button {
-                pet.name = name
-                pet.numActivities = numActivities
-                pet.backgroundColor = backgroundColor
-                pet.buttonColor = buttonColor
+                do {
+                    try context.save()
+                } catch {
+                    print("Failed to save pet: \(error)")
+                }
                 
                 dismiss()
             } label: {

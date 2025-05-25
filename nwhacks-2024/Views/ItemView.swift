@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct ItemView<ItemType: PersistentModel>: View where ItemType: Identifiable {
-    @EnvironmentObject var pet: Pet
+    @Environment(Pet.self) var pet
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     @Query private var items: [ItemType]

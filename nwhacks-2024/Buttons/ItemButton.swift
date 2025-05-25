@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ItemButton<SheetContent: View>: View {
-    @EnvironmentObject var pet: Pet
+    @Environment(Pet.self) var pet
     let icon: Image
     let iconHeight: CGFloat
     let sheetContent: () -> SheetContent

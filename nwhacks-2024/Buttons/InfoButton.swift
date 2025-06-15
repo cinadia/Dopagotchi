@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct InfoButton: View {
+    @Environment(\.colorScheme) var colorScheme
     @Environment(Pet.self) var pet
     @State private var showingInfoSheet = false
     
@@ -15,7 +16,7 @@ struct InfoButton: View {
         Button {
             showingInfoSheet.toggle()
         } label: {
-            Image("questionmark")
+            Image(colorScheme == .dark ? "questionmarkDark" : "questionmark")
                .frame(width: 40, height: 40)
                .background(pet.buttonColor)
                .foregroundStyle(.white)

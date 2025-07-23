@@ -7,12 +7,14 @@
 
 import SwiftUI
 import SwiftData
+import Combine
+import UIKit
 
 struct ItemView<ItemType: PersistentModel>: View where ItemType: Identifiable {
     @Environment(Pet.self) var pet
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
-    @Query private var items: [ItemType]
+    @Query private var items: [ItemType] // TODO: items aren't shown in chronologically-added order
     
     var title: String
     var subtitle: String
@@ -21,6 +23,7 @@ struct ItemView<ItemType: PersistentModel>: View where ItemType: Identifiable {
     
     @State private var isAddingItem = false
     @State private var itemToAdd = ""
+    @State private var keyboardHeight: CGFloat = 0
     @FocusState private var isAddItemFocused: Bool
     
     var body: some View {
@@ -41,6 +44,8 @@ struct ItemView<ItemType: PersistentModel>: View where ItemType: Identifiable {
             }
             .containerRelativeFrame([.horizontal, .vertical])
             .background(pet.backgroundColor)
+            .padding(.bottom, keyboardHeight)
+            .onReceive(KeyboardPublisher.height) { self.keyboardHeight = $0 }
         } detail: {
             Text("Select an item")
         }
@@ -63,7 +68,7 @@ struct ItemView<ItemType: PersistentModel>: View where ItemType: Identifiable {
         .scrollContentBackground(.hidden)
     }
     
-    var addingItemView: some View { // TODO: lots of warnings + keyboard isnt right
+    var addingItemView: some View {
         Form {
             Section(header: Text("Item to Add")) {
                 HStack {

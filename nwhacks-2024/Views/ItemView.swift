@@ -23,11 +23,13 @@ struct ItemView<ItemType: PersistentModel>: View where ItemType: Identifiable {
     
     @State private var isAddingItem = false
     @State private var itemToAdd = ""
+    @State private var editMode: EditMode = .inactive
     @State private var keyboardHeight: CGFloat = 0
+
     @FocusState private var isAddItemFocused: Bool
     
     var body: some View {
-        NavigationSplitView {
+        NavigationStack {
             VStack {
                 Text(title).customTitleFont()
                 Spacer()
@@ -65,6 +67,7 @@ struct ItemView<ItemType: PersistentModel>: View where ItemType: Identifiable {
             }
             .onDelete(perform: deleteItems)
         }
+        .environment(\.editMode, $editMode)
         .scrollContentBackground(.hidden)
     }
     
@@ -103,17 +106,32 @@ struct ItemView<ItemType: PersistentModel>: View where ItemType: Identifiable {
             }
         }
     }
+    
+    private var editButton: some View {
+        return Button {
+            if editMode == .inactive {
+                editMode = .active
+            } else {
+                editMode = .inactive
+            }
+        } label: {
+            Text(editMode == .inactive ? "Edit" : "Done").customFont().foregroundStyle(.button)
+        }
+    }
+
 }
 
 extension ItemView {
     @ToolbarContentBuilder
     func toolbarContent() -> some ToolbarContent {
         ToolbarItem(placement: .navigationBarLeading) {
-            EditButton()
+            editButton
         }
         ToolbarItem(placement: .navigationBarTrailing) {
-            Button("Dismiss") {
+            Button(action: {
                 dismiss()
+            }) {
+                Text("Dismiss").customFont().foregroundStyle(.button)
             }
         }
         ToolbarItem {
@@ -122,8 +140,9 @@ extension ItemView {
                 isAddItemFocused.toggle()
                 itemToAdd = ""
             }) {
-                Label("Add Item", systemImage: "plus")
+                Label("Add Item", systemImage: "plus") // TODO: change this colour, prob by creating our own + or something
             }
         }
     }
 }
+

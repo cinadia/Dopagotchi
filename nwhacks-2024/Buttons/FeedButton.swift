@@ -17,12 +17,12 @@ struct FeedButton: View {
                 pet.health += 10
             }
             pet.activitiesCompleted += 1
-           // pet.isSparkle = true TODO: animations
+            pet.isSparkle = true
             self.showingSheet?.wrappedValue = false
             
             Task {
                 try await Task.sleep(nanoseconds: 2_000_000_000)
-               // pet.isSparkle = false TODO: bring back 'animations'
+                pet.isSparkle = false
             }
             
         } label: {

@@ -44,18 +44,19 @@ struct WelcomeSubView: View {
 }
 
 struct CardView: View {
+    @Environment(\.colorScheme) var colorScheme
     var index: Int
     
     var body: some View{
         switch index {
         case 0:
-            frogView(imageName: "FrogSparkle", text: "Hello! I am your pet frog.")
+            frogView(imageName: colorScheme == .dark ? "FrogSparkleDark": "FrogSparkle", text: "Hello! I am your pet frog.")
         case 1:
-            frogView(imageName: "FrogSad", text: "Sometimes I get hungry.")
+            frogView(imageName: colorScheme == .dark ? "FrogSadDark" : "FrogSad", text: "Sometimes I get hungry.")
         case 2:
-            frogView(imageName: "FrogHappy", text: "But you can feed me to keep me happy! Start by adding 'food' items in each category, which are tasks that will keep you happy, too. When you complete an activity, feed me!")
+            frogView(imageName: colorScheme == .dark ? "FrogHappyDark" : "FrogHappy", text: "But you can feed me to keep me happy! Start by adding 'food' items in each category, which are tasks that will keep you happy, too. When you complete an activity, feed me!")
         default:
-            frogView(imageName: "FrogSparkle", text: "default")
+            frogView(imageName: colorScheme == .dark ? "FrogSparkleDark": "FrogSparkle", text: "default")
         }
     }
     

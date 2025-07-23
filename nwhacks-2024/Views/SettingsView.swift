@@ -39,15 +39,21 @@ struct SettingsView: View {
                     TextField(String(pet.numActivities), value: $pet.numActivities, format: .number)
                 }
                
-                HStack {
-                    Text("button color:").customFont()
-                    ColorPicker("", selection: $pet.buttonColor)
-                }
-                
-                HStack {
-                    Text("background color:").customFont()
-                    ColorPicker("", selection: $pet.backgroundColor)
-                }
+                // TODO: I think we should have some default colur SCHEMES that the user can pick.
+                // Having the user pick their colours directly means we'd have to store .buttonColor and
+                // .backgroundColor as hex values and convert them to Color objects (because SwiftData does
+                // not support storing Colors directly), which messes with the default "ButtonColor" and
+                // "BackgroundColor" values we have in Assets. And these two colours have nice light/dark
+                // mode values too which I'd like to keep. Removing this for now....
+//                HStack {
+//                    Text("button color:").customFont()
+//                    ColorPicker("", selection: $pet.buttonColor)
+//                }
+//                
+//                HStack {
+//                    Text("background color:").customFont()
+//                    ColorPicker("", selection: $pet.backgroundColor)
+//                }
             }
             .scrollContentBackground(.hidden)
             

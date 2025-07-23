@@ -9,11 +9,14 @@ import SwiftUI
 import SwiftData
 
 struct PetView: View {
+    @Environment(\.colorScheme) var colorScheme
     @Environment(Pet.self) var pet
 
     var body: some View {
         VStack {
-            Image(String(pet.health))
+            // TODO: need to fix this Image because we eventually want it to represent
+            // the pet's health, not # of activities completed
+            Image(String(pet.health) + (colorScheme == .dark ? "dark" : "light"))
             Text("activities completed today: " + String(pet.activitiesCompleted))
                 .customFont()
             Image(getFrog())
@@ -25,18 +28,18 @@ struct PetView: View {
     }
     
     private func getFrog() -> String {
-        return "FrogSparkle"
         // TODO: bring back 'animations'
-//        if pet.isSparkle {
-//            return "FrogSparkle"
-//        }
-//        
-//        if pet.health <= 30 {
-//            return "FrogSad"
-//        } else if pet.health < 100 {
-//            return "FrogNeutral"
-//        } else {
-//            return"FrogHappy"
-//        }
+        if pet.isSparkle {
+            // TODO: some of the dark frog vectors are very big and I don't know why lol
+            return colorScheme == .dark ? "FrogSparkleDark": "FrogSparkle"
+        }
+        
+        if pet.health <= 30 {
+            return colorScheme == .dark ? "FrogSadDark" : "FrogSad"
+        } else if pet.health < 100 {
+            return colorScheme == .dark ? "FrogNeutralDark" : "FrogNeutral"
+        } else {
+            return colorScheme == .dark ? "FrogHappyDark" : "FrogHappy"
+        }
     }
 }

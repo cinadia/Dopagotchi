@@ -65,6 +65,19 @@ struct ContentView: View {
             }
         }
         .environment(activePet)
+        .onAppear() {
+            // Reset the number of activities completed each day
+            let defaults = UserDefaults.standard
+
+            let lastSavedDate = defaults.object(forKey: "lastSavedDate") as? Date ?? Date()
+            let isLastSavedDateToday = Calendar.current.isDateInToday(lastSavedDate)
+
+            if !isLastSavedDateToday {
+                activePet.activitiesCompleted = 0
+              
+              defaults.set(Date(), forKey: "lastSavedDate")
+            }
+        }
         
     }
 }

@@ -9,11 +9,13 @@ import SwiftUI
 import SwiftData
 
 struct DessertsView: View {
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         ItemView<DessertItem>(
             title: "desserts",
             subtitle: "activities that don’t make you feel \n great if you overdo them", // TODO: resizing text to fit screen
-            imageName: "dessert",
+            imageName: colorScheme == .dark ? "dessertDark" : "dessert",
             createItem: { DessertItem(description: $0) }
         )
     }

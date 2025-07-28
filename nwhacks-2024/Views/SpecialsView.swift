@@ -9,11 +9,13 @@ import SwiftUI
 import SwiftData
 
 struct SpecialsView: View {
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         ItemView<SpecialItem>(
             title: "specials",
             subtitle: "activities that are expensive or less convenient",
-            imageName: "special",
+            imageName: colorScheme == .dark ? "specialDark" : "special",
             createItem: { SpecialItem(description: $0) }
         )
     }

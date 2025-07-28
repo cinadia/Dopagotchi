@@ -79,8 +79,10 @@ extension SettingsView {
     @ToolbarContentBuilder
         func toolbarContent() -> some ToolbarContent {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button("Dismiss") {
+                Button(action: {
                     dismiss()
+                }) {
+                    Text("Dismiss").customFont().foregroundStyle(.button)
                 }
             }
         }

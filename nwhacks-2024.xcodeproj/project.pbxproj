@@ -49,6 +49,7 @@
 		17C59A3C2DC31D0600D9DBFE /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C59A3B2DC31D0000D9DBFE /* ColorExtension.swift */; };
 		17DC3D172DFF53CD007D8DB0 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DC3D162DFF53C8007D8DB0 /* Notification.swift */; };
 		17DC3D182DFF588D007D8DB0 /* Publishers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DC3D152DFF53AF007D8DB0 /* Publishers.swift */; };
+		761A05212E3457E200041C8B /* frog-sfx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 761A05202E3457E200041C8B /* frog-sfx.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		17C59A3B2DC31D0000D9DBFE /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		17DC3D152DFF53AF007D8DB0 /* Publishers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publishers.swift; sourceTree = "<group>"; };
 		17DC3D162DFF53C8007D8DB0 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		761A05202E3457E200041C8B /* frog-sfx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "frog-sfx.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		173755F62B5C4FEE001EDD18 /* nwhacks-2024 */ = {
 			isa = PBXGroup;
 			children = (
+				761A051F2E3457CB00041C8B /* resources */,
 				17C59A2E2DC2EFB500D9DBFE /* Protocols */,
 				173756412B5CBE2A001EDD18 /* Extensions */,
 				173756402B5CBD84001EDD18 /* Info.plist */,
@@ -231,6 +234,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		761A051F2E3457CB00041C8B /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				761A05202E3457E200041C8B /* frog-sfx.mp3 */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -291,6 +302,7 @@
 			files = (
 				173756012B5C4FF0001EDD18 /* Preview Assets.xcassets in Resources */,
 				1737563F2B5CBD4C001EDD18 /* SHPinscher-Regular.otf in Resources */,
+				761A05212E3457E200041C8B /* frog-sfx.mp3 in Resources */,
 				173755FE2B5C4FF0001EDD18 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

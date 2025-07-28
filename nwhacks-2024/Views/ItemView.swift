@@ -14,6 +14,7 @@ struct ItemView<ItemType: PersistentModel>: View where ItemType: Identifiable {
     @Environment(Pet.self) var pet
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.colorScheme) var colorScheme
     @Query private var items: [ItemType] // TODO: items aren't shown in chronologically-added order
     
     var title: String
@@ -29,7 +30,7 @@ struct ItemView<ItemType: PersistentModel>: View where ItemType: Identifiable {
     @FocusState private var isAddItemFocused: Bool
     
     var body: some View {
-        NavigationStack {
+        NavigationSplitView {
             VStack {
                 Text(title).customTitleFont()
                 Spacer()
@@ -140,7 +141,7 @@ extension ItemView {
                 isAddItemFocused.toggle()
                 itemToAdd = ""
             }) {
-                Label("Add Item", systemImage: "plus") // TODO: change this colour, prob by creating our own + or something
+                Label("Add Item", image: colorScheme == .dark ? "PlusDark" : "PlusLight")
             }
         }
     }

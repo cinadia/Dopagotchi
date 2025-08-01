@@ -18,8 +18,7 @@ struct InfoButton: View {
         } label: {
             Image(colorScheme == .dark ? "questionmarkDark" : "questionmark")
                .frame(width: 40, height: 40)
-               .background(pet.buttonColor)
-               .foregroundStyle(.white)
+               .background(.button)
                .clipShape(Circle())
                .padding()
         }

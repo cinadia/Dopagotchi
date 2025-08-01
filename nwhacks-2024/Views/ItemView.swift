@@ -30,7 +30,7 @@ struct ItemView<ItemType: PersistentModel>: View where ItemType: Identifiable {
     @FocusState private var isAddItemFocused: Bool
     
     var body: some View {
-        NavigationSplitView {
+        NavigationView {
             VStack {
                 Text(title).customTitleFont()
                 Spacer()
@@ -49,8 +49,6 @@ struct ItemView<ItemType: PersistentModel>: View where ItemType: Identifiable {
             .background(pet.backgroundColor)
             .padding(.bottom, keyboardHeight)
             .onReceive(KeyboardPublisher.height) { self.keyboardHeight = $0 }
-        } detail: {
-            Text("Select an item")
         }
     }
     

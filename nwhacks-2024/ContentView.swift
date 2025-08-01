@@ -47,7 +47,7 @@ struct ContentView: View {
             }()
         }
         
-        NavigationView {
+        Group {
             if showHome {
                 VStack {
                     PetView().environment(activePet)

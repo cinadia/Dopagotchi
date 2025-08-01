@@ -30,7 +30,7 @@ struct ItemButton<SheetContent: View>: View {
                 )
                 .padding()
         }
-        .sheet(isPresented: $showingSheet) {
+        .fullScreenCover(isPresented: $showingSheet ) {
             sheetContent()
                 .environment(\.showingSheet, $showingSheet)
         }

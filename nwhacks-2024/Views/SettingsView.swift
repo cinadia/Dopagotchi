@@ -12,6 +12,8 @@ struct SettingsView: View {
     @Environment(\.modelContext) private var context
     @Bindable var pet: Pet
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.colorScheme) private var colorScheme
+    @State private var showingInfoSheet = false
     
     var body: some View {
         NavigationSplitView {
@@ -78,6 +80,9 @@ struct SettingsView: View {
 extension SettingsView {
     @ToolbarContentBuilder
         func toolbarContent() -> some ToolbarContent {
+            ToolbarItem(placement: .navigationBarLeading) {
+                InfoButton()
+            }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
                     dismiss()

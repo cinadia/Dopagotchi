@@ -6,5 +6,10 @@
 	<array>
 		<string>SHPinscher-Regular.otf</string>
 	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>BackgroundColor</string>
+	</dict>
 </dict>
 </plist>

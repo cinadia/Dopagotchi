@@ -53,7 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		173755F42B5C4FEE001EDD18 /* nwhacks-2024.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nwhacks-2024.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		173755F42B5C4FEE001EDD18 /* Dopagotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dopagotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		173755F72B5C4FEE001EDD18 /* nwhacks_2024App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nwhacks_2024App.swift; sourceTree = "<group>"; };
 		173755F92B5C4FEE001EDD18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		173755FD2B5C4FF0001EDD18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		173755EB2B5C4FEE001EDD18 = {
 			isa = PBXGroup;
 			children = (
-				173755F62B5C4FEE001EDD18 /* nwhacks-2024 */,
+				173755F62B5C4FEE001EDD18 /* Dopagotchi */,
 				173755F52B5C4FEE001EDD18 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,12 +122,12 @@
 		173755F52B5C4FEE001EDD18 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				173755F42B5C4FEE001EDD18 /* nwhacks-2024.app */,
+				173755F42B5C4FEE001EDD18 /* Dopagotchi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		173755F62B5C4FEE001EDD18 /* nwhacks-2024 */ = {
+		173755F62B5C4FEE001EDD18 /* Dopagotchi */ = {
 			isa = PBXGroup;
 			children = (
 				761A051F2E3457CB00041C8B /* resources */,
@@ -143,7 +143,7 @@
 				173755FD2B5C4FF0001EDD18 /* Assets.xcassets */,
 				173755FF2B5C4FF0001EDD18 /* Preview Content */,
 			);
-			path = "nwhacks-2024";
+			path = Dopagotchi;
 			sourceTree = "<group>";
 		};
 		173755FF2B5C4FF0001EDD18 /* Preview Content */ = {
@@ -245,9 +245,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		173755F32B5C4FEE001EDD18 /* nwhacks-2024 */ = {
+		173755F32B5C4FEE001EDD18 /* Dopagotchi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 173756042B5C4FF0001EDD18 /* Build configuration list for PBXNativeTarget "nwhacks-2024" */;
+			buildConfigurationList = 173756042B5C4FF0001EDD18 /* Build configuration list for PBXNativeTarget "Dopagotchi" */;
 			buildPhases = (
 				173755F02B5C4FEE001EDD18 /* Sources */,
 				173755F12B5C4FEE001EDD18 /* Frameworks */,
@@ -257,9 +257,9 @@
 			);
 			dependencies = (
 			);
-			name = "nwhacks-2024";
+			name = Dopagotchi;
 			productName = "nwhacks-2024";
-			productReference = 173755F42B5C4FEE001EDD18 /* nwhacks-2024.app */;
+			productReference = 173755F42B5C4FEE001EDD18 /* Dopagotchi.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -277,7 +277,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 173755EF2B5C4FEE001EDD18 /* Build configuration list for PBXProject "nwhacks-2024" */;
+			buildConfigurationList = 173755EF2B5C4FEE001EDD18 /* Build configuration list for PBXProject "Dopagotchi" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -290,7 +290,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				173755F32B5C4FEE001EDD18 /* nwhacks-2024 */,
+				173755F32B5C4FEE001EDD18 /* Dopagotchi */,
 			);
 		};
 /* End PBXProject section */
@@ -485,11 +485,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"nwhacks-2024/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Dopagotchi/Preview Content\"";
 				DEVELOPMENT_TEAM = 8V32V337Z6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "nwhacks-2024/Info.plist";
+				INFOPLIST_FILE = Dopagotchi/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Dopagotchi;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -502,7 +502,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cindycui.nwhacks-2024";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cindycui.dopagotchi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -521,11 +521,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"nwhacks-2024/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Dopagotchi/Preview Content\"";
 				DEVELOPMENT_TEAM = 8V32V337Z6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "nwhacks-2024/Info.plist";
+				INFOPLIST_FILE = Dopagotchi/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Dopagotchi;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -538,7 +538,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cindycui.nwhacks-2024";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cindycui.dopagotchi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -553,7 +553,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		173755EF2B5C4FEE001EDD18 /* Build configuration list for PBXProject "nwhacks-2024" */ = {
+		173755EF2B5C4FEE001EDD18 /* Build configuration list for PBXProject "Dopagotchi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				173756022B5C4FF0001EDD18 /* Debug */,
@@ -562,7 +562,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		173756042B5C4FF0001EDD18 /* Build configuration list for PBXNativeTarget "nwhacks-2024" */ = {
+		173756042B5C4FF0001EDD18 /* Build configuration list for PBXNativeTarget "Dopagotchi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				173756052B5C4FF0001EDD18 /* Debug */,

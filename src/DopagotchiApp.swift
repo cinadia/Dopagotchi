@@ -1,5 +1,5 @@
 //
-//  nwhacks_2024App.swift
+//  Dopagotchi.swift
 //  nwhacks-2024
 //
 //  Created by Cindy Cui on 2024-01-20.
@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct nwhacks_2024App: App {
+struct Dopagotchi: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             User.self,

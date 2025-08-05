@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		173755F82B5C4FEE001EDD18 /* nwhacks_2024App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173755F72B5C4FEE001EDD18 /* nwhacks_2024App.swift */; };
+		173755F82B5C4FEE001EDD18 /* DopagotchiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173755F72B5C4FEE001EDD18 /* DopagotchiApp.swift */; };
 		173755FA2B5C4FEE001EDD18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173755F92B5C4FEE001EDD18 /* ContentView.swift */; };
 		173755FE2B5C4FF0001EDD18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173755FD2B5C4FF0001EDD18 /* Assets.xcassets */; };
 		173756012B5C4FF0001EDD18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173756002B5C4FF0001EDD18 /* Preview Assets.xcassets */; };
@@ -54,7 +54,7 @@
 
 /* Begin PBXFileReference section */
 		173755F42B5C4FEE001EDD18 /* Dopagotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dopagotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		173755F72B5C4FEE001EDD18 /* nwhacks_2024App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nwhacks_2024App.swift; sourceTree = "<group>"; };
+		173755F72B5C4FEE001EDD18 /* DopagotchiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopagotchiApp.swift; sourceTree = "<group>"; };
 		173755F92B5C4FEE001EDD18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		173755FD2B5C4FF0001EDD18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		173756002B5C4FF0001EDD18 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		173755EB2B5C4FEE001EDD18 = {
 			isa = PBXGroup;
 			children = (
-				173755F62B5C4FEE001EDD18 /* Dopagotchi */,
+				173755F62B5C4FEE001EDD18 /* src */,
 				173755F52B5C4FEE001EDD18 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,7 +127,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		173755F62B5C4FEE001EDD18 /* Dopagotchi */ = {
+		173755F62B5C4FEE001EDD18 /* src */ = {
 			isa = PBXGroup;
 			children = (
 				761A051F2E3457CB00041C8B /* resources */,
@@ -138,12 +138,12 @@
 				1737562E2B5CB36C001EDD18 /* Models */,
 				173756182B5C94D8001EDD18 /* Views */,
 				173756172B5C94BC001EDD18 /* Buttons */,
-				173755F72B5C4FEE001EDD18 /* nwhacks_2024App.swift */,
+				173755F72B5C4FEE001EDD18 /* DopagotchiApp.swift */,
 				173755F92B5C4FEE001EDD18 /* ContentView.swift */,
 				173755FD2B5C4FF0001EDD18 /* Assets.xcassets */,
 				173755FF2B5C4FF0001EDD18 /* Preview Content */,
 			);
-			path = Dopagotchi;
+			path = src;
 			sourceTree = "<group>";
 		};
 		173755FF2B5C4FF0001EDD18 /* Preview Content */ = {
@@ -348,7 +348,7 @@
 				1737560A2B5C5E19001EDD18 /* TaskView.swift in Sources */,
 				1737561F2B5C95DC001EDD18 /* SidesView.swift in Sources */,
 				17DC3D182DFF588D007D8DB0 /* Publishers.swift in Sources */,
-				173755F82B5C4FEE001EDD18 /* nwhacks_2024App.swift in Sources */,
+				173755F82B5C4FEE001EDD18 /* DopagotchiApp.swift in Sources */,
 				173756512B5D7E00001EDD18 /* SaveButtonNewStyle.swift in Sources */,
 				17C59A302DC2EFC100D9DBFE /* DescribableItem.swift in Sources */,
 				1737564B2B5CFB7E001EDD18 /* NextButton.swift in Sources */,

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct InfoView: View {
-    @Environment(Pet.self) var pet
+    @EnvironmentObject var petViewModel: PetViewModel
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -47,7 +47,7 @@ struct InfoView: View {
                         .customSmallFont()
                 }
             }
-            .background(pet.backgroundColor)
+            .background(petViewModel.pet.backgroundColor)
             
         }
         .toolbar {

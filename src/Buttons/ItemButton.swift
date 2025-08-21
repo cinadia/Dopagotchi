@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ItemButton<SheetContent: View>: View {
-    @Environment(Pet.self) var pet
+    @EnvironmentObject var petViewModel: PetViewModel
     let icon: Image
     let iconHeight: CGFloat
     let sheetContent: () -> SheetContent
@@ -25,7 +25,7 @@ struct ItemButton<SheetContent: View>: View {
                 .frame(height: iconHeight)
                 .background(
                     Circle()
-                        .fill(pet.buttonColor)
+                        .fill(petViewModel.pet.buttonColor)
                         .frame(width: 90, height: 90)
                 )
                 .padding()

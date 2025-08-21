@@ -10,13 +10,15 @@ import SwiftData
 
 struct SidesView: View {
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.modelContext) var context
+    @EnvironmentObject var petViewModel: PetViewModel
     
     var body: some View {
         ItemView<SideItem>(
+            itemViewModel: ItemViewModel(context: context, createItem: { SideItem(description: $0) }),
             title: "sides",
             subtitle: "activities that you can add to other activities to make it more enjoyable",
             imageName: colorScheme == .dark ? "sideDark" :"side",
-            createItem: { SideItem(description: $0) }
         )
     }
 }

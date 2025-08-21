@@ -10,21 +10,9 @@ import SwiftData
 
 struct ContentView: View {
     @State var showHome: Bool
-    @Query var pets: [Pet]
-    @Query var users: [User]
     @Environment(\.modelContext) var context
-    
-    // Try to get the existing user, or create a new one
-    var user: User {
-        if let existingUser = users.first {
-            return existingUser
-        } else {
-            let newUser = User()
-            context.insert(newUser)
-            try? context.save()
-            return newUser
-        }
-    }
+   
+    @State private var viewModel: UserViewModel?
     
     init() {
         // Check if the app has launched before
@@ -37,51 +25,27 @@ struct ContentView: View {
     }
     
     var body: some View {
-        var activePet: Pet {
-            user.pets.first(where: { $0.isActive }) ?? {
-                // (this shouldn't be hit)
-                let fallback = Pet()
-                user.pets.append(fallback)
-                try? context.save()
-                return fallback
-            }()
-        }
-        
         Group {
-            if showHome {
+            if showHome, let viewModel = viewModel, let petViewModel = viewModel.activePetViewModel {
                 VStack {
-                    PetView().environment(activePet)
-                    TaskView().environment(activePet)
-                }
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        InfoButton()
-                    }
+                    PetView()
+                    TaskView()
                 }
                 .containerRelativeFrame([.horizontal, .vertical])
-                .background(activePet.backgroundColor)
-            } else {
+                .background(petViewModel.pet.backgroundColor)
+                .environmentObject(petViewModel)
+            }
+            else {
                 WelcomeView(showHome: $showHome)
             }
         }
-        .environment(activePet)
         .onAppear() {
-            // Reset the number of activities completed each day
-            let defaults = UserDefaults.standard
-
-            let lastSavedDate = defaults.object(forKey: "lastSavedDate") as? Date ?? Date()
-            let isLastSavedDateToday = Calendar.current.isDateInToday(lastSavedDate)
-
-            if !isLastSavedDateToday {
-                activePet.activitiesCompleted = 0
-              
-              defaults.set(Date(), forKey: "lastSavedDate")
+            // Environment variables are not available on init(). Must create UserViewModel
+            // during .onAppear() so we can use `context` from the Environment variable
+            if viewModel == nil {
+                viewModel = UserViewModel(context: context)
             }
+            viewModel?.checkDailyReset()
         }
-        
     }
-}
-
-#Preview {
-    ContentView()
 }

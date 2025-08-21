@@ -10,13 +10,15 @@ import SwiftData
 
 struct AppsView: View {
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.modelContext) var context
+    @EnvironmentObject var petViewModel: PetViewModel
     
     var body: some View {
         ItemView<AppItem>(
+            itemViewModel: ItemViewModel(context: context, createItem: { AppItem(description: $0) }),
             title: "starters",
             subtitle: "activites that are quick and don't suck you in",
             imageName: colorScheme == .dark ? "appDark" : "app",
-            createItem: { AppItem(description: $0) }
         )
     }
 }

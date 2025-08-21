@@ -9,7 +9,6 @@ import SwiftUI
 
 struct InfoButton: View {
     @Environment(\.colorScheme) var colorScheme
-    @Environment(Pet.self) var pet
     @State private var showingInfoSheet = false
     
     var body: some View {

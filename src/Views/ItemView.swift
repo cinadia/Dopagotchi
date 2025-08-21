@@ -11,16 +11,15 @@ import Combine
 import UIKit
 
 struct ItemView<ItemType: PersistentModel>: View where ItemType: Identifiable {
-    @Environment(Pet.self) var pet
-    @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     @Environment(\.colorScheme) var colorScheme
-    @Query private var items: [ItemType] // TODO: items aren't shown in chronologically-added order
+    @EnvironmentObject var petViewModel: PetViewModel
+    
+    @StateObject var itemViewModel: ItemViewModel<ItemType>
     
     var title: String
     var subtitle: String
     var imageName: String
-    var createItem: (String) -> ItemType
     
     @State private var isAddingItem = false
     @State private var itemToAdd = ""
@@ -46,7 +45,7 @@ struct ItemView<ItemType: PersistentModel>: View where ItemType: Identifiable {
                 }
             }
             .containerRelativeFrame([.horizontal, .vertical])
-            .background(pet.backgroundColor)
+            .background(petViewModel.pet.backgroundColor)
             .padding(.bottom, keyboardHeight)
             .onReceive(KeyboardPublisher.height) { self.keyboardHeight = $0 }
         }
@@ -54,7 +53,7 @@ struct ItemView<ItemType: PersistentModel>: View where ItemType: Identifiable {
     
     var listView: some View {
         List {
-            ForEach(items) { item in
+            ForEach(itemViewModel.items) { item in
                 Grid {
                     GridRow {
                         FeedButton()
@@ -64,7 +63,7 @@ struct ItemView<ItemType: PersistentModel>: View where ItemType: Identifiable {
                     }
                 }
             }
-            .onDelete(perform: deleteItems)
+            .onDelete(perform: itemViewModel.deleteItems)
         }
         .environment(\.editMode, $editMode)
         .scrollContentBackground(.hidden)
@@ -79,31 +78,16 @@ struct ItemView<ItemType: PersistentModel>: View where ItemType: Identifiable {
                         .focused($isAddItemFocused)
                     
                     Button("Done") {
-                        addItem()
-                        isAddingItem = false
-                        itemToAdd = ""
+                        withAnimation {
+                            itemViewModel.addItem(item: itemToAdd)
+                            isAddingItem = false
+                            itemToAdd = ""
+                        }
                     }
                 }
             }
         }
         .frame(height: 100)
-    }
-    
-    private func addItem() {
-        withAnimation {
-            if !itemToAdd.isEmpty {
-                let newItem = createItem(itemToAdd)
-                modelContext.insert(newItem)
-            }
-        }
-    }
-    
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
     }
     
     private var editButton: some View {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -50,7 +50,20 @@
 		17DC3D172DFF53CD007D8DB0 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DC3D162DFF53C8007D8DB0 /* Notification.swift */; };
 		17DC3D182DFF588D007D8DB0 /* Publishers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DC3D152DFF53AF007D8DB0 /* Publishers.swift */; };
 		761A05212E3457E200041C8B /* frog-sfx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 761A05202E3457E200041C8B /* frog-sfx.mp3 */; };
+		767AA9192E53C8E30055E757 /* PetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AA9182E53C8E30055E757 /* PetViewModel.swift */; };
+		767AA91D2E53E1470055E757 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AA91C2E53E1430055E757 /* ItemViewModel.swift */; };
+		767AA91F2E53E9240055E757 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AA91E2E53E9220055E757 /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		767AA9122E53C39E0055E757 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 173755EC2B5C4FEE001EDD18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 173755F32B5C4FEE001EDD18;
+			remoteInfo = Dopagotchi;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		173755F42B5C4FEE001EDD18 /* Dopagotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dopagotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,10 +111,25 @@
 		17DC3D152DFF53AF007D8DB0 /* Publishers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publishers.swift; sourceTree = "<group>"; };
 		17DC3D162DFF53C8007D8DB0 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		761A05202E3457E200041C8B /* frog-sfx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "frog-sfx.mp3"; sourceTree = "<group>"; };
+		767AA90E2E53C39E0055E757 /* DopagotchiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopagotchiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		767AA9182E53C8E30055E757 /* PetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewModel.swift; sourceTree = "<group>"; };
+		767AA91C2E53E1430055E757 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		767AA91E2E53E9220055E757 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		767AA90F2E53C39E0055E757 /* DopagotchiTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DopagotchiTests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		173755F12B5C4FEE001EDD18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		767AA90B2E53C39E0055E757 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				173755F62B5C4FEE001EDD18 /* src */,
+				767AA90F2E53C39E0055E757 /* DopagotchiTests */,
 				173755F52B5C4FEE001EDD18 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -123,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				173755F42B5C4FEE001EDD18 /* Dopagotchi.app */,
+				767AA90E2E53C39E0055E757 /* DopagotchiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +160,7 @@
 		173755F62B5C4FEE001EDD18 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				767AA9172E53C7850055E757 /* ViewModels */,
 				761A051F2E3457CB00041C8B /* resources */,
 				17C59A2E2DC2EFB500D9DBFE /* Protocols */,
 				173756412B5CBE2A001EDD18 /* Extensions */,
@@ -242,6 +273,16 @@
 			path = resources;
 			sourceTree = "<group>";
 		};
+		767AA9172E53C7850055E757 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				767AA91E2E53E9220055E757 /* UserViewModel.swift */,
+				767AA91C2E53E1430055E757 /* ItemViewModel.swift */,
+				767AA9182E53C8E30055E757 /* PetViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -262,6 +303,29 @@
 			productReference = 173755F42B5C4FEE001EDD18 /* Dopagotchi.app */;
 			productType = "com.apple.product-type.application";
 		};
+		767AA90D2E53C39E0055E757 /* DopagotchiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 767AA9162E53C39E0055E757 /* Build configuration list for PBXNativeTarget "DopagotchiTests" */;
+			buildPhases = (
+				767AA90A2E53C39E0055E757 /* Sources */,
+				767AA90B2E53C39E0055E757 /* Frameworks */,
+				767AA90C2E53C39E0055E757 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				767AA9132E53C39E0055E757 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				767AA90F2E53C39E0055E757 /* DopagotchiTests */,
+			);
+			name = DopagotchiTests;
+			packageProductDependencies = (
+			);
+			productName = DopagotchiTests;
+			productReference = 767AA90E2E53C39E0055E757 /* DopagotchiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -269,11 +333,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1520;
+				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					173755F32B5C4FEE001EDD18 = {
 						CreatedOnToolsVersion = 15.2;
+					};
+					767AA90D2E53C39E0055E757 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 173755F32B5C4FEE001EDD18;
 					};
 				};
 			};
@@ -291,6 +359,7 @@
 			projectRoot = "";
 			targets = (
 				173755F32B5C4FEE001EDD18 /* Dopagotchi */,
+				767AA90D2E53C39E0055E757 /* DopagotchiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -307,6 +376,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		767AA90C2E53C39E0055E757 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -319,6 +395,7 @@
 				1737561A2B5C94F7001EDD18 /* AppsButton.swift in Sources */,
 				173756432B5CBE40001EDD18 /* TextStyles.swift in Sources */,
 				173756162B5C8D56001EDD18 /* FeedButtonStyle.swift in Sources */,
+				767AA91F2E53E9240055E757 /* UserViewModel.swift in Sources */,
 				173756342B5CB5C9001EDD18 /* SideItem.swift in Sources */,
 				173756122B5C68EE001EDD18 /* MainsView.swift in Sources */,
 				17C59A322DC2EFE000D9DBFE /* ItemButton.swift in Sources */,
@@ -331,6 +408,7 @@
 				173756252B5C968E001EDD18 /* SidesButton.swift in Sources */,
 				17C59A382DC2F72400D9DBFE /* User.swift in Sources */,
 				173756322B5CB53A001EDD18 /* AppItem.swift in Sources */,
+				767AA91D2E53E1470055E757 /* ItemViewModel.swift in Sources */,
 				173756142B5C84E9001EDD18 /* FeedButton.swift in Sources */,
 				173756382B5CB638001EDD18 /* SpecialItem.swift in Sources */,
 				173756272B5C96B5001EDD18 /* DessertsButton.swift in Sources */,
@@ -340,6 +418,7 @@
 				173755FA2B5C4FEE001EDD18 /* ContentView.swift in Sources */,
 				1737562B2B5C96FE001EDD18 /* SettingsButton.swift in Sources */,
 				17C59A3A2DC2F89200D9DBFE /* Pet.swift in Sources */,
+				767AA9192E53C8E30055E757 /* PetViewModel.swift in Sources */,
 				173756212B5C9629001EDD18 /* DessertsView.swift in Sources */,
 				173756472B5CF5EC001EDD18 /* ShowingSheetKey.swift in Sources */,
 				173756292B5C96D7001EDD18 /* SpecialsButton.swift in Sources */,
@@ -356,7 +435,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		767AA90A2E53C39E0055E757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		767AA9132E53C39E0055E757 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 173755F32B5C4FEE001EDD18 /* Dopagotchi */;
+			targetProxy = 767AA9122E53C39E0055E757 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		173756022B5C4FF0001EDD18 /* Debug */ = {
@@ -552,6 +646,44 @@
 			};
 			name = Release;
 		};
+		767AA9142E53C39E0055E757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V32V337Z6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UnitTests.DopagotchiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dopagotchi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Dopagotchi";
+			};
+			name = Debug;
+		};
+		767AA9152E53C39E0055E757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V32V337Z6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UnitTests.DopagotchiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dopagotchi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Dopagotchi";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -569,6 +701,15 @@
 			buildConfigurations = (
 				173756052B5C4FF0001EDD18 /* Debug */,
 				173756062B5C4FF0001EDD18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		767AA9162E53C39E0055E757 /* Build configuration list for PBXNativeTarget "DopagotchiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				767AA9142E53C39E0055E757 /* Debug */,
+				767AA9152E53C39E0055E757 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

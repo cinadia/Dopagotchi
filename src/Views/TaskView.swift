@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TaskView: View {
-    @Environment(Pet.self) var pet
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
@@ -33,14 +32,14 @@ struct TaskView: View {
             
             GridRow {
                 SpecialsButton(icon: Image(colorScheme == .dark ? "specialDark" :"special"))
-                SettingsButton(icon: Image(colorScheme == .dark ? "settingsDark" :"settings"))
+//                SettingsButton(icon: Image(colorScheme == .dark ? "settingsDark" :"settings"))
+                // TODO: fix settings button
             }
             GridRow {
                 customFontText("specials")
                 customFontText("settings")
             }
         }
-        .environment(pet)
     }
     
     func customFontText(_ text: String) -> some View {

@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct FeedButtonStyle: ButtonStyle {
-    @Environment(Pet.self) var pet
+    @EnvironmentObject var petViewModel: PetViewModel
     func makeBody(configuration: Configuration) -> some View {
      
         configuration.label
             .frame(width: 40, height: 40)
-            .background(pet.buttonColor)
+            .background(petViewModel.pet.buttonColor)
             .foregroundStyle(.black)
             .clipShape(Circle())
             .padding()

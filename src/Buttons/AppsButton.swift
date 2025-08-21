@@ -20,5 +20,5 @@ struct AppsButton: View {
 }
 
 #Preview {
-    MainsButton(icon: Image("cat"))
+    AppsButton(icon: Image("cat"))
 }
